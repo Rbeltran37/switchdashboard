@@ -1,0 +1,3523 @@
+body {
+  padding: 0;
+  margin: 0;
+  cursor: default;
+}
+
+#bootup-background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+}
+
+#nintendo-logo-bootup {
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 2s;
+}
+
+#switch-logo-bootup {
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+#wakeup-screen {
+  position: absolute;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+#left-side-wakeup-screen {
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 70vw;
+  left: 0;
+  transition-property: right;
+  transition-duration: 100ms;
+}
+
+#first-thumbnail {
+  width: 22vw;
+  height: 24vh;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-property: top;
+  transition-duration: 100ms;
+}
+
+#second-thumbnail {
+  width: 22vw;
+  height: 24vh;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-property: top;
+  transition-duration: 100ms;
+}
+
+#third-thumbnail {
+  width: 22vw;
+  height: 24vh;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-property: top;
+  transition-duration: 100ms;
+}
+
+#y-button-icon {
+  width: 10%;
+  height: 3vw;
+  position: absolute;
+  top: 90%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+}
+
+#featured-news-text {
+  color: white;
+  position: absolute;
+  top: 90.1%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.wake-up-text {
+  font-size: 2.5vw;
+}
+
+#left-side-wakeup-three-times-text {
+  font-size: 2vw;
+  color: white;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+
+}
+
+#left-side-wakeup-white-circle-1 {
+  border: .1vw solid white;
+  background-color: rgb(43, 43, 43);
+  height: .5vw;
+  border-radius: 50%;
+  width: .5vw;
+  position: absolute;
+  top: 90.1%;
+  left: 47.3%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#left-side-wakeup-white-circle-2 {
+  border: .1vw solid white;
+  background-color: rgb(43, 43, 43);
+  height: .5vw;
+  border-radius: 50%;
+  width: .5vw;
+  position: absolute;
+  top: 90.1%;
+  left: 50.3%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#left-side-wakeup-white-circle-3 {
+  border: .1vw solid white;
+  background-color: rgb(43, 43, 43);
+  height: .5vw;
+  border-radius: 50%;
+  width: .5vw;
+  position: absolute;
+  top: 90.1%;
+  left: 53.3%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#left-side-wakeup-b-button {
+  width: 2vw;
+  position: absolute;
+  top: 90.1%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#left-side-wakeup-back-text {
+  font-size: 2vw;
+  color: white;
+  position: absolute;
+  top: 90.1%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#right-side-wakeup-screen {
+  background-color: rgb(43, 43, 43);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 30vw;
+  transition-property: left;
+  transition-duration: 100ms;
+}
+
+#MyClockDisplay {
+  color: white;
+  font-size: 1.8vw;
+  font-family: 'Courier New', monospace;
+  position: absolute;
+  top: 7%;
+  left: 81.5%;
+  transform: translate(-50%, -50%);
+}
+
+#AMPM {
+  color: white;
+  font-size: 1.1vw;
+  font-family: 'Courier New', monospace;
+  position: absolute;
+  top: 7.4%;
+  left: 86.6%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+#wifi-icon {
+  width: 2vw;
+  position: absolute;
+  top: 6.6%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+#battery-icon {
+  width: 3.8vw;
+  position: absolute;
+  top: 6.8%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
+#home-icon {
+  width: 10vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#a-button {
+  width: 3vw;
+  position: absolute;
+  top: 90%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+}
+
+#continue-text {
+  margin: 0;
+  color: white;
+  position: absolute;
+  top: 90.1%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+#three-times-text {
+  font-size: 2vw;
+  color: white;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+
+}
+
+#white-circle-1 {
+  border: .1vw solid white;
+  background-color: rgb(43, 43, 43);
+  height: .5vw;
+  border-radius: 50%;
+  width: .5vw;
+  position: absolute;
+  top: 90.1%;
+  left: 47.3%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#white-circle-2 {
+  border: .1vw solid white;
+  background-color: rgb(43, 43, 43);
+  height: .5vw;
+  border-radius: 50%;
+  width: .5vw;
+  position: absolute;
+  top: 90.1%;
+  left: 50.3%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#white-circle-3 {
+  border: .1vw solid white;
+  background-color: rgb(43, 43, 43);
+  height: .5vw;
+  border-radius: 50%;
+  width: .5vw;
+  position: absolute;
+  top: 90.1%;
+  left: 53.3%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#b-button {
+  width: 2vw;
+  position: absolute;
+  top: 90.1%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#back-text {
+  font-size: 2vw;
+  color: white;
+  position: absolute;
+  top: 90.1%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes whiteCircleHome {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: .5;
+    visibility: hidden;
+  }
+}
+
+@keyframes selected {
+  from {border: 0.35vw solid hsl(188, 100%, 35%);}
+  to {border: 0.35vw solid hsl(188, 100%, 75%);}
+}
+
+@keyframes enlargeThumbnail {
+  0% {
+    
+  }
+
+  100% {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+  }
+}
+
+@keyframes eShopstrips {
+  0% {
+    width: 0vw;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+@keyframes eShopVisible {
+  0% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes hideeShopLogo {
+  0% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+#home-background {
+  background-color: rgb(43, 43, 43);
+  display: none;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+#home-top-container {
+  width: 100vw;
+  height: 87.9vh;
+}
+
+#home-bottom-container {
+  width: 100vw;
+  height: 12vh;
+}
+
+#home-horizontal-line {
+  width: 95vw;
+  margin-left: 2.5vw;
+  border-bottom: .1vh solid white;
+}
+
+#mario-profile-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  left: 2.2%;
+  top: 8.5%;
+  visibility: hidden;
+}
+
+#mario-profile {
+  border-radius: 50%;
+  width: 3%;
+  border: 0.35vw solid rgb(43, 43, 43);
+  margin-top: 4vh;
+  margin-left: 4vw;
+  margin-bottom: 0;
+}
+
+#yoshi-profile {
+  border-radius: 50%;
+  width: 3%;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#yoshi-profile-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  left: 6.2%;
+  top: 8.5%;
+  visibility: hidden;
+}
+
+#fox-profile {
+  border-radius: 50%;
+  width: 3%;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#fox-profile-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  left: 10.8%;
+  top: 8.5%;
+  visibility: hidden;
+}
+
+#MyClockDisplay-home {
+  color: white;
+  font-size: 1.8vw;
+  font-family: 'Courier New', monospace;
+  position: absolute;
+  top: 7.2%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+}
+
+#AMPM-home {
+  color: white;
+  font-size: 1.1vw;
+  font-family: 'Courier New', monospace;
+  position: absolute;
+  top: 7.6%;
+  left: 86.6%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+#wifi-icon-home {
+  width: 2vw;
+  position: absolute;
+  top: 6.8%;
+  left: 88.8%;
+  transform: translate(-50%, -50%);
+}
+
+#battery-icon-home {
+  width: 3.8vw;
+  position: absolute;
+  top: 7%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+}
+
+#game-scroll-container {
+  display: grid;
+  grid-template-columns: 12vh 42vh 42vh 42vh 42vh 42vh 42vh 42vh 42vh 42vh 42vh 12vh;
+  grid-column-gap: 1vw;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-top: 8vh;
+}
+
+#game-grid-cover {
+  position: relative;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#game-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+#game-grid-cover {
+  width: 100%;
+}
+
+#switch-home-page-icons-container {
+  display: grid;
+  grid-template-columns: 12vh 12vh 12vh 12vh 12vh 12vh 12vh;
+  grid-column-gap: 2vw;
+  margin-top: 4.5vh;
+  justify-content: center;
+  line-height: 0;
+}
+
+#game-cover-container {
+  position: relative;
+}
+
+#zelda-grid-cover-text, #splatoon-grid-cover-text, #fire-emblem-grid-cover-text, #super-smash-grid-cover-text, #xenoblade-3-grid-cover-text, #mario-rabbids-grid-cover-text, #metroid-dread-grid-cover-text, #no-more-heroes-3-grid-cover-text, #monster-hunter-rise-grid-cover-text, #super-mario-odyssey-grid-cover-text {
+  font-size: 2vw;
+  color: #33ccff;
+  position: absolute;
+  visibility: hidden;
+  white-space: nowrap;
+  top: -16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+#switch-online-container, #news-icon-container, #eShop-icon-container, #album-icon-container, #controllers-icon-container, #settings-icon-container, #sleepmode-icon-container {
+  position: relative;
+}
+
+#switch-online-icon {
+  width: 100%;
+  border-radius: 100%;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#switch-online-icon-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  top: 95%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+#news-icon {
+  width: 100%;
+  border-radius: 100%;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#news-icon-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  top: 95%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+#eShop-icon {
+  width: 100%;
+  border-radius: 100%;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#eShop-icon-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  top: 95%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+#album-icon {
+  width: 100%;
+  border-radius: 100%;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#album-icon-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  top: 95%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+#controllers-icon {
+  width: 100%;
+  border-radius: 100%;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#controllers-icon-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  top: 95%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+#settings-icon {
+  width: 100%;;
+  border-radius: 100%;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#settings-icon-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  top: 95%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+#sleepmode-icon {
+  width: 100%;;
+  border-radius: 100%;
+  border: 0.35vw solid rgb(43, 43, 43);
+}
+
+#sleepmode-icon-text {
+  font-size: 1.5vw;
+  color: #33ccff;
+  position: absolute;
+  top: 95%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+#switch-icon {
+  width: 6vw;
+  position: absolute;
+  left: 5vw;
+  bottom: 3.5vh;
+  z-index: 1;
+}
+
+#home-b-button {
+  position: absolute;
+  z-index: 1;
+  width: 2.2vw;
+  bottom: 4vh;
+  right: 22vw;
+}
+
+#back-home-text {
+  position: absolute;
+  right: 17vw;
+  bottom: 3.8vh;
+  z-index: 1;
+  font-size: 2vw;
+  color: white;
+}
+
+#home-a-button {
+  position: absolute;
+  z-index: 1;
+  width: 2.2vw;
+  bottom: 4vh;
+  right: 10vw;
+}
+
+#home-ok-text {
+  position: absolute;
+  z-index: 1;
+  font-size: 2vw;
+  color: white;
+  bottom: 3.8vh;
+  right: 6.5vw;
+}
+
+/* Profile Page */
+#profile-page-container {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: rgb(43, 43, 43);
+}
+
+#profile-page-top-container {
+  width: 100%;
+  height: 15%;
+}
+
+#profile-page-body-container {
+  width: 100%;
+  height: 72.8%;
+  position: relative;
+}
+
+#profile-page-left-body-container {
+  position: absolute;
+  left: 0;
+  right: 70%;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-image: linear-gradient(to right, rgb(43, 43, 43) , #333333);
+}
+
+#profile-page-left-body-container::-webkit-scrollbar {
+  display: none;
+}
+
+#profile-page-right-body-container {
+  position: absolute;
+  left: 30%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#profile-page-right-body-container::-webkit-scrollbar {
+  display: none;
+}
+
+#profile-page-bottom-container {
+  width: 100%;
+  height: 12%;
+}
+
+#profile-page-horizontal-line {
+  border-bottom: .1vh solid white;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+#profile-page-mario-profile {
+  border-radius: 50%;
+  width: 5vw;
+  border: 0.35vw solid rgb(43, 43, 43, 0);
+  margin-top: 1.5vw;
+  margin-left: 3vw;
+}
+
+#profile-page-name {
+  font-size: 4vw;
+  color: white;
+  position: absolute;
+  top: 4%;
+  left: 10%;
+}
+
+#profile-page-navigation-main-text {
+  font-size: 2vw;
+  color: #80ffd4;
+  margin-left: 19%;
+  padding-left: 2%;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  border-left: .3vw solid #80ffd4;
+}
+
+#profile-page-navigation-text {
+  font-size: 2vw;
+  color: white;
+  margin-left: 19%;
+  padding-left: 2%;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  border-left: .3vw solid rgba(0, 0, 0, 0);
+}
+
+#profile-page-navigation-horizontal-line {
+  border-bottom: .1vh solid gray;
+  width: 75%;
+  margin-left: 20%;
+}
+
+#profile-page-friends-online-text {
+  font-size: 1vw;
+  color: gray;
+  line-height: 0;
+  margin-top: 3%;
+}
+
+#profile-tab-mario-pic {
+  width: 25%;
+  margin-left: 5%;
+  margin-top: 3%;
+  float: left;
+}
+
+#profile-page-profile-tab-container {
+  display: block;
+}
+
+#profile-page-friend-list-container {
+  display: none;
+}
+
+#profile-page-trending-container {
+  display: none;
+}
+
+#profile-page-online-play-invites-container {
+  display: none;
+}
+
+#profile-page-friend-suggestions-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+#profile-page-add-friend-container {
+  display: none;
+}
+
+#profile-page-user-settings-container {
+  display: none;
+}
+
+#profile-page-profile-tab-horizontal-line-1 {
+  width: 57%;
+  margin-top: 3%;
+  margin-right: 10%;
+  margin-bottom: 0;
+  float: right;
+  border-bottom: .1vh solid gray;
+}
+
+#profile-page-profile-tab-horizontal-line-2 {
+  width: 57%;
+  margin-top: 0%;
+  margin-right: 10%;
+  margin-bottom: 0;
+  float: right;
+  border-bottom: .1vh solid gray;
+}
+
+#mario-profile-tab-name {
+  color: white;
+  font-size: 3vw;
+  float: left;
+  margin-left: 3.5%;
+  line-height: 0;
+}
+
+#profile-tab-text {
+  color: white;
+  font-size: 1.5vw;
+  float: left;
+  line-height: 300%;
+  margin-left: 3.5%;
+}
+
+#profile-tab-text-2 {
+  color: white;
+  font-size: 1.5vw;
+  float: right;
+  margin-right: 36.5%;
+}
+
+#profile-tab-play-activity-text {
+  color: white;
+  font-size: 1.5vw;
+  border-left: .3vw solid white;
+  padding-left: 1%;
+  margin-left: 5%;
+  margin-top: 5%;
+  float: left;
+}
+
+#profile-tab-question-mark-circle-1 {
+  width: 2vw;
+  float: left;
+  margin-top: 3.8%;
+  margin-left: 46.1%;
+}
+
+#profile-tab-question-mark-circle-2 {
+  width: 2vw;
+  float: left;
+  margin-top: 3%;
+  margin-left: 68%;
+}
+
+#profile-page-profile-tab-horizontal-line-3 {
+  width: 85%;
+  margin-top: 0%;
+  margin-left: 5%;
+  margin-bottom: 0;
+  float: left;
+  border-bottom: .1vh solid gray;
+}
+
+#profile-pencil-icon {
+  width: 2.2vw;
+  margin-top: 2.5%;
+  margin-left: 41.8%;
+  float: left;
+}
+
+#profile-page-game-cover {
+  width: 10%;
+  object-fit: cover;
+  float: left;
+  margin-left: 6.5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#profile-page-game-title {
+  font-size: 1.5vw;
+  margin-left: 1%;
+  margin-right: 52%;
+  color: white;
+  float: left;
+}
+
+#profile-page-game-time {
+  font-size: 1.3vw;
+  margin-left: 1%;
+  margin-top: 0;
+  color: gray;
+  float: left;
+}
+
+#friend-list-grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-column-gap: .5%;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+#friend-list-grid-2 {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-column-gap: .5%;
+  justify-content: center;
+  margin-top: 0;
+  text-align: center;
+}
+
+#friend-list-profile-name {
+  font-size: 1.5vw;
+  color: white;
+  line-height: 0;
+}
+
+#friend-list-offline-text {
+  font-size: 1vw;
+  color: #a6a6a6;
+  line-height: 0;
+}
+
+#friend-list-grid-item {
+  width: 100%;
+  height: 100%;
+  background-color:  #595959;
+}
+
+#friend-list-grid-profile-pic {
+  background-color: #33ccff;
+  width: 100%;
+  height: 100%;
+}
+
+#friend-list-grid-profile-pic-2 {
+  background-color: #ff9999;
+  width: 100%;
+  height: 100%;
+}
+
+#friend-list-grid-profile-pic-3 {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#friend-list-grid-profile-pic-4 {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+#white-smiley-face {
+  width: 3%;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+
+#trending-text-1 {
+  font-size: 2vw;
+  color: white;
+}
+
+#trending-grid {
+  display: grid;
+  grid-template-columns: 27% 27% 27%;
+  grid-column-gap: 1.5%;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+#trending-game-cover {
+  width: 100%;
+}
+
+#trending-text-grid {
+  display: grid;
+  grid-template-columns: 27% 27% 27%;
+  grid-column-gap: 1.5%;
+  justify-content: center;
+  text-align: center;
+  line-height: 0;
+}
+
+#trending-text-2 {
+  font-size: 1.5vw;
+  color: gray;
+}
+
+#trending-picture-grid {
+  position: relative;
+}
+
+#trending-friend-position-1 {
+  width: 15%;
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+}
+
+#trending-friend-position-2 {
+  width: 15%;
+  position: absolute;
+  bottom: 4%;
+  left: 23%;
+}
+
+#trending-friend-position-3 {
+  width: 15%;
+  position: absolute;
+  bottom: 4%;
+  left: 42%;
+}
+
+#trending-friend-position-4 {
+  width: 15%;
+  position: absolute;
+  bottom: 4%;
+  left: 61%;
+}
+
+#trending-luigi-picture {
+  width: 100%;
+  border-radius: 50%;
+  background-color: #33ccff;
+  border: .2vw solid white;
+}
+
+#trending-peach-picture {
+  width: 100%;
+  border-radius: 50%;
+  background-color: #ff9999;
+  border: .2vw solid white;
+}
+
+#trending-donkeykong-picture {
+  width: 100%;
+  border-radius: 50%;
+  background-color: white;
+  border: .2vw solid white;
+}
+
+#trending-koopa-picture {
+  width: 100%;
+  border-radius: 50%;
+  background-color: black;
+  border: .2vw solid white;
+}
+
+#online-play-invites-text-container {
+  width: 100%;
+  height: 100%;
+}
+
+#online-play-invites-text {
+  font-size: 2vw;
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20%;
+}
+
+#friend-suggestions-top-container {
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+
+#l-button-with-arrow{
+  width: 5vw;
+  position: absolute;
+  top: 50%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+}
+
+#phone-icon {
+  width: 3vw;
+  position: absolute;
+  top: 54%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  padding-bottom: .4%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  border-bottom: .35vw solid rgba(28, 255, 212, 0);
+}
+
+#facebook-icon {
+  width: 4.6vw;
+  position: absolute;
+  top: 51%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 0.15%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-bottom: .35vw solid rgba(28, 255, 212, 0);
+}
+
+#twitter-icon {
+  width: 5.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: .35vw solid rgba(28, 255, 212, 0);
+}
+
+#ds-icon {
+  width: 3.7vw;
+  position: absolute;
+  top: 53%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  padding-bottom: .9%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  border-bottom: .35vw solid rgba(28, 255, 212, 0);
+}
+
+#wii-u-icon {
+  width: 5.3vw;
+  position: absolute;
+  top: 50%;
+  left: 76%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 0%;
+  padding-left: .5%;
+  padding-right: .5%;
+  border-bottom: .35vw solid rgba(28, 255, 212, 0);
+}
+
+#r-button-with-arrow {
+  width: 5vw;
+  position: absolute;
+  top: 50%;
+  left: 89%;
+  transform: translate(-50%, -50%);
+}
+
+#friend-suggestions-top-container {
+  width: 90%;
+  margin-left: 5%;
+  border-bottom: .1vh solid gray;
+}
+
+#facebook-container {
+  display: none;
+}
+
+#ds-container {
+  display: none;
+}
+
+#wii-u-container {
+  display: none;
+}
+
+#phone-container {
+  display: block;
+}
+
+#twitter-container {
+  display: none;
+}
+
+#friend-suggestions-pic-1 {
+  width: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
+#facebook-text-container {
+  width: 70%;
+  margin-left: 15%;
+  font-size: 2vw  ;
+  color: white;
+}
+
+#friends-suggestions-smiley-face {
+  width: 2vw;
+  vertical-align: bottom;
+}
+
+#friend-suggestions-next-text {
+  color: white;
+  border: .2vw solid white;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin: 2% 25%;
+  text-align: center;
+}
+
+.friend-suggestions-next-text-font {
+  font-size: 3vw;
+}
+
+#add-friend-horizontal-line {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 3%;
+  border-bottom: .1vh solid gray;
+}
+
+#friend-request-icon {
+  width: 3.5vw;
+  margin-left: 6%;
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
+#received-friend-requests-text {
+  font-size: 2vw;
+  color: white;
+  vertical-align: 40%;
+}
+
+#add-friend-horizontal-line-2 {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1%;
+  border-bottom: .1vh solid gray;
+}
+
+#add-friend-page-friend-code {
+  font-size: 1vw;
+  color: #a6a6a6;
+  line-height: 0;
+  margin-left: 72.5%;
+}
+
+#local-users-icon {
+  width: 3.5vw;
+  margin-left: 6%;
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
+#search-local-users-text {
+  font-size: 2vw;
+  color: white;
+  vertical-align: 35%;
+}
+
+#search-with-friend-code-icon {
+  width: 3.5vw;
+  margin-left: 6%;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+#search-with-friend-code-text {
+  font-size: 2vw;
+  color: white;
+  vertical-align: 50%;
+}
+
+#sent-friend-request-icon {
+  width: 3vw;
+  margin-left: 6.5%;
+  margin-right: 2.2%;
+  margin-top: 0%;
+}
+
+#sent-friend-requests-text {
+  font-size: 2vw;
+  color: white;
+  vertical-align: 50%;
+}
+
+#add-friend-page-empty-space {
+  margin-top: 7%;
+}
+
+#user-settings-text-with-left-border {
+  color: white;
+  font-size: 1.5vw;
+  border-left: .3vw solid white;
+  padding-left: 1%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#user-settings-horizontal-line {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+  border-bottom: .1vh solid gray;
+}
+
+#user-settings-tab-text {
+  font-size: 2vw;
+  color: white;
+  margin-left: 6.5%;
+  line-height: 0;
+}
+
+#user-settings-tab-text-2 {
+  font-size: 1vw;
+  color: gray;
+  margin-left: 6.5%;
+}
+
+#user-settings-tab-text-3 {
+  font-size: 1vw;
+  color: gray;
+  margin-left: 1%;
+}
+
+#user-settings-mario-text {
+  font-size: 1.7vw;
+  color: rgb(28, 255, 212);
+  float: right;
+  margin-right: 6.5%;
+}
+
+#user-settings-edit-icon-picture {
+  width: 4%;
+  float: right;
+  margin-right: 6.5%;
+  margin-top: 0.8%;
+}
+
+/* Nintendo Switch Online Page */
+#nintendo-switch-online-page-container {
+  display: none;
+  z-index: 3;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#nintendo-switch-online-grid-1 {
+  background-color: red;
+  width: 30%;
+  height: 25%;
+  float: left;
+  position: relative;
+}
+
+#nintendo-switch-online-grid-2 {
+  background-color: #cccccc;
+  width: 70%;
+  height: 50%;
+  float: right;
+}
+
+#nintendo-switch-online-grid-3 {
+  background-color: white;
+  width: 30%;
+  height: 63%;
+  float: left;
+}
+
+#nintendo-switch-online-grid-4 {
+  background-color: #e6e6e6;
+  width: 70%;
+  height: 38%;
+  float: right;
+}
+
+#nintendo-switch-online-footer {
+  width: 100%;
+  height: 12%;
+  background-color: #d9d9d9;
+  float: left;
+}
+
+#nintendo-switch-online-logo {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nintendo-switch-online-ok-text {
+  position: absolute;
+  z-index: 1;
+  font-size: 2vw;
+  color: black;
+  bottom: 3.8vh;
+  right: 6.5vw;
+}
+
+#nintendo-switch-online-page-tint {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, .5);
+}
+
+#nintendo-switch-online-popup-container {
+  position: absolute;
+  z-index: 4;
+  top: 30%;
+  bottom: 30%;
+  left: 25%;
+  right: 25%;
+  background-color: #333333;
+}
+
+#nintendo-switch-online-popup-top {
+  position: absolute;
+  top: 0;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  border-bottom: .1vh solid gray;
+}
+
+#nintendo-switch-online-popup-bottom {
+  position: absolute;
+  top: 20%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#nintendo-switch-online-popup-top-text {
+  font-size: 2vw;
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  right: 5%;
+}
+
+#nintendo-switch-online-popup-bottom-text {
+  font-size: 2vw;
+  color: white;
+  position: absolute;
+  top: 67.5%;
+  left: 45%;
+  right: 45%;
+  text-align: center;
+}
+
+/* News Page */
+#news-page-container {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: rgb(43, 43, 43);
+}
+
+#news-page-top-container {
+  width: 100%;
+  height: 15%;
+}
+
+#news-page-horizontal-line {
+  border-bottom: .1vh solid white;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+#news-page-body-container {
+  width: 100%;
+  height: 72.8%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#news-page-body-container::-webkit-scrollbar {
+  display: none;
+}
+
+#news-page-featured-grid {
+  display: grid;
+  grid-template-columns: 28% 28% 28%;
+  grid-gap: .1vw;
+  justify-content: center;
+}
+
+#news-page-bottom-container {
+  width: 100%;
+  height: 12%;
+}
+
+#news-page-top-horizontal-line {
+  border-bottom: .1vh solid white;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+#news-x-button {
+  position: absolute;
+  z-index: 1;
+  width: 2.8vw;
+  bottom: 3.8vh;
+  right: 41.5vw;
+}
+
+#bookmark-news-text {
+  position: absolute;
+  right: 29vw;
+  bottom: 3.8vh;
+  z-index: 1;
+  color: white;
+}
+
+#news-y-button {
+  position: absolute;
+  z-index: 1;
+  width: 2.3vw;
+  bottom: 3.9vh;
+  right: 60vw;
+}
+
+#channel-list-text {
+  position: absolute;
+  right: 49vw;
+  bottom: 3.8vh;
+  z-index: 1;
+  color: white;
+}
+
+.news-footer-bottom-text {
+  font-size: 2vw;
+}
+
+#news-page-icon {
+  width: 6vw;
+  position: absolute;
+  top: 3.5%;
+  left: 2%;
+}
+
+#news-page-title {
+  position: absolute;
+  left: 9%;
+  top: 5%;
+  font-size: 3.5vw;
+  color: white;
+}
+
+#news-find-channels-text {
+  position: absolute;
+  left: 70%;
+  top: 3%;
+  color: white;
+  padding: 1% 6%;
+  border: .2vw solid white;
+}
+
+.find-channel-font-size {
+  font-size: 2.5vw;
+}
+
+#news-page-plus-button {
+  width: 2%;
+  position: absolute;
+  left: 94.5%;
+  top: 3.5%;
+}
+
+#news-page-section-header {
+  font-size: 2vw;
+  color: white;
+  margin-left: 7vw;
+  line-height: 8vh;
+  border-left: .2vw solid white;
+  padding-left: 1vw;
+}
+
+#news-page-body-grid-cell {
+  background-color: #595959;
+  border: .35vw solid rgba(43, 43, 43, 1);
+}
+
+#news-page-body-grid-cell:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+#news-pic {
+  width: 100%;
+  height: 70%;
+}
+
+#news-grid-text {
+  font-size: 1.5vw;
+  margin-top: 0;
+  margin-left: 1vw;
+  color: #8c8c8c;
+}
+
+/* eShop Page */
+#eshop-page-container {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff8000;
+}
+
+#strip-1 {
+  height: 16vh;
+  width: 0vw;
+  background-color: #ff8c1a;
+}
+
+#strip-2 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff8c1a;
+}
+
+#strip-3 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff8c1a;
+}
+
+#strip-4 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff8c1a;
+}
+
+#strip-5 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff8c1a;
+}
+
+#strip-6 {
+  height: 16vh;
+  width: 0vw;
+  background-color: #ff8c1a;
+}
+
+#second-strips {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#strip-7 {
+  height: 16vh;
+  width: 0vw;
+  background-color: #ff9900;
+  margin-left: auto;
+}
+
+#strip-8 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff9900;
+  margin-left: auto;
+}
+
+#strip-9 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff9900;
+  margin-left: auto;
+}
+
+#strip-10 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff9900;
+  margin-left: auto;
+}
+
+#strip-11 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff9900;
+  margin-left: auto;
+}
+
+#strip-12 {
+  height: 16vh;
+  width: 0vw;
+  background-color: #ff9900;
+  margin-left: auto;
+}
+
+#third-strips {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#strip-13 {
+  height: 16vh;
+  width: 0vw;
+  background-color: #e6ac00;
+}
+
+#strip-14 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #e6ac00;
+}
+
+#strip-15 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #e6ac00;
+}
+
+#strip-16 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #e6ac00;
+}
+
+#strip-17 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #e6ac00;
+}
+
+#strip-18 {
+  height: 16vh;
+  width: 0vw;
+  background-color: #e6ac00;
+}
+
+#fourth-strips {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#strip-19 {
+  height: 16vh;
+  width: 0vw;
+  background-color: #ff8000;
+  margin-left: auto;
+}
+
+#strip-20 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff8000;
+  margin-left: auto;
+}
+
+#strip-21 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff8000;
+  margin-left: auto;
+}
+
+#strip-22 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff8000;
+  margin-left: auto;
+}
+
+#strip-23 {
+  height: 17vh;
+  width: 0vw;
+  background-color: #ff8000;
+  margin-left: auto;
+}
+
+#strip-24 {
+  height: 16vh;
+  width: 0vw;
+  background-color: #ff8000;
+  margin-left: auto;
+}
+
+#eshop-logo {
+  position: absolute;
+  z-index: 4;
+  width: 25vw;
+  bottom: 5vh;
+  right: 5vw;
+}
+
+#eshop-container {
+  position: absolute;
+  visibility: hidden;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#eshop-container-left-side {
+  position: absolute;
+  top: 0;
+  bottom: 12vh;
+  left: 0;
+  right: 70vw;
+  background-color: #ff8000;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#eshop-container-left-side::-webkit-scrollbar {
+  display: none;
+}
+
+#eshop-container-right-side {
+  position: absolute;
+  top: 0;
+  bottom: 12vh;
+  left: 30vw;
+  right: 0vw;
+  background-color: #f2f2f2;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#eshop-container-right-side::-webkit-scrollbar {
+  display: none;
+}
+
+#eshop-container-bottom-side {
+  position: absolute;
+  top: 88vh;
+  bottom: 0vh;
+  left: 0vw;
+  right: 0vw;
+  background-color: #e6e6e6;
+}
+
+#eshop-logo-word-only {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  margin-bottom: 8vh;
+}
+
+#magnifying-glass-container {
+  width: 29.3vw;
+  height: 11.2%;
+  border: .35vw solid rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, .2);
+}
+
+#magnifying-glass {
+  width: 10%;
+  margin-left: 3.5vw;
+  margin-top: 2vh;
+  opacity: 1;
+}
+
+#eshop-navigation-text {
+  font-size: 2.5vw;
+  padding-left: 3.5vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, .5);
+  border: .35vw solid rgba(0, 0, 0, 0);
+}
+
+#dummy-text-for-var {
+  color: white;
+}
+
+#x-button-black {
+  width: 2.5vw;
+  position: absolute;
+  top: 3.5vh;
+  right: 34vw;
+}
+
+#eshop-container-bottom-side-close {
+  font-size: 2vw;
+  position: absolute;
+  top: 3.8vh;
+  right: 29vw;
+}
+
+#eshop-switch-icon-black {
+  width: 8vw;
+  position: absolute;
+  top: 2.2vh;
+  left: 3vw;
+}
+
+#b-button-black {
+  width: 2.5vw;
+  position: absolute;
+  top: 3.5vh;
+  right: 22.5vw;
+}
+
+#eshop-container-bottom-side-back {
+  font-size: 2vw;
+  position: absolute;
+  top: 3.8vh;
+  right: 18vw;
+}
+
+#a-button-black {
+  width: 2.5vw;
+  position: absolute;
+  top: 3.5vh;
+  right: 12vw;
+}
+
+#eshop-container-bottom-side-confirm {
+  font-size: 2vw;
+  position: absolute;
+  top: 3.8vh;
+  right: 5vw;
+}
+
+#search-eshop-page {
+  display: block;
+}
+
+#recent-releases-page {
+  display: none;
+}
+
+#current-offers-page {
+  display: none;
+}
+
+#charts-page {
+  display: none;
+}
+
+#coming-soon-page {
+  display: none;
+}
+
+#redeem-code-page {
+  display: none;
+}
+
+#eshop-profile-picture {
+  border-radius: 50%;
+  width: 3vw;
+  margin-top: 2vw;
+  margin-left: 83.5%;
+  margin-bottom: 0;
+  vertical-align: baseline;
+}
+
+#eshop-profile-sign {
+  font-size: 2vw;
+  font-weight: bold;
+  color: orangered;
+  position: absolute;
+  right: 7vw;
+  top: 5vh;
+}
+
+#recent-releases-page-title {
+  font-size: 2.5vw;
+  color: gray;
+  line-height: 0;
+  margin-left: 6%;
+}
+
+#recent-releases-game-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw;
+  grid-template-rows: 28vh 24vh 24vh;
+  grid-gap: 0.5vw;
+  justify-content: center;
+}
+
+#recent-releases-game-1 {
+  background-color: white;
+  position: relative;
+}
+
+#eshop-game-banner {
+  width: 100%;
+  height: 75%;
+}
+
+#eshop-price {
+  font-size: 1.5vw;
+  text-align: right;
+  line-height: 250%;
+  margin-left: 15vw;
+}
+
+#eshop-sale {
+  font-size: 1vw;
+  color: white;
+  background-color: red;
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+}
+
+#eshop-rank-position {
+  font-size: 1vw;
+  color: black;
+  background-color: white;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  padding: 2% 3%;
+}
+
+#eshop-search-bar {
+  width: 45vw;
+  height: 6vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: .1vh solid orange;
+  outline: none;
+  font-size: 2vw;
+  text-align: center;
+}
+
+#code-search-bar {
+  width: 45vw;
+  height: 6vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: .1vh solid orange;
+  outline: none;
+  font-size: 2vw;
+  text-align: center;
+}
+
+#search-bar-sub-text {
+  font-size: 1.2vw;
+  color: gray;
+  position: absolute;
+  top: 51%;
+  left: 69%;
+}
+
+#filter-orange-circle {
+  position: absolute;
+  top: 53.8%;
+  right: 18%;
+  width: 1.2vw;
+  height: 2.4vh;
+  background-color: orange;
+  border-radius: 50%;
+  font-size: 1.1vw;
+  text-indent: 30%;
+}
+
+#coming-soon-game-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30vw 30vw;
+  grid-template-rows: 34vh 34vh 34vh;
+  grid-gap: 0.5vw;
+  justify-content: center;
+}
+
+#coming-soon-game {
+  background-color: white;
+}
+
+#coming-soon-image {
+  width: 100%;
+  height: 85%;
+}
+
+#eshop-coming-soon-date {
+  font-size: 1.5vw;
+  line-height: 150%;
+  margin-left: 15vw;
+  color: gray;
+}
+
+/* Album Page */
+#album-page-container {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(43, 43, 43);
+}
+
+#album-page-header-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 10vw 49vw 37vw;
+  grid-template-rows: 10vh;
+}
+
+#album-page-body-grid-container {
+  width: 100vw;
+  height: 73.8vh;
+}
+
+#album-page-lower-container {
+  width: 100vw;
+  height: 12vh;
+}
+
+#album-icon-white {
+  width: 6.5vw;
+  margin-left: 3vw;
+}
+
+#album-header-text-main {
+  font-size: 2.5vw;
+  color: white;
+  display: grid;
+  align-items: center;
+}
+
+#album-header-text-sub {
+  font-size: 2.5vw;
+  color: white;
+  display: grid;
+  align-items: center;
+}
+
+#album-page-top-horizontal-line {
+  border-bottom: .1vh solid white;
+  margin-left: 2.5vw;
+  width: 95vw;
+}
+
+#album-page-body-grid {
+  width: 100vw;
+  height: 77.9vh;
+  display: grid;
+  grid-template-columns: 16vw 16vw 16vw 16vw 16vw;
+  grid-template-rows: 18.6vh;
+  grid-gap: 1vw;
+  justify-content: center;
+  margin-top: 4vh;
+}
+
+#screenshot-thumbnail {
+  width: 100%;
+  border: .35vw solid rgba(0, 0, 0, 0);
+}
+
+#screenshot-fullscreen {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+}
+
+#screenshot-thumbnail:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+}
+
+#screenshot-large {
+  position: absolute;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+}
+
+#screenshot-footer {
+  position: absolute;
+  width: 100vw;
+  height: 12vh;
+  top: 88vh;
+  visibility: hidden;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#switch-icon-for-screenshot {
+  width: 6vw;
+  position: absolute;
+  left: 5vw;
+  bottom: 3.5vh;
+  z-index: 1;
+}
+
+#a-button-for-screenshot {
+  width: 2vw;
+  position: absolute;
+  right: 20.5vw;
+  bottom: 3.5vh;
+}
+
+.screenshot-footer-bottom-text {
+  font-size: 2vw;
+}
+
+#Sharing-text {
+  color: white;
+  position: absolute;
+  right: 4vw;
+  bottom: 3.1vh;
+}
+
+#b-button-for-screenshot {
+  width: 2vw;
+  position: absolute;
+  right: 32.5vw;
+  bottom: 3.5vh;
+}
+
+#back-text-for-screenshot {
+  color: white;
+  position: absolute;
+  right: 28vw;
+  bottom: 3.1vh;
+}
+
+#x-button-for-screenshot {
+  width: 2.5vw;
+  position: absolute;
+  right: 44.5vw;
+  bottom: 3vh;
+}
+
+#delete-text-for-screenshot {
+  color: white;
+  position: absolute;
+  right: 39vw;
+  bottom: 3.1vh;
+}
+
+#plus-button-for-screenshot {
+  width: 2.5vw;
+  position: absolute;
+  right: 55vw;
+  bottom: 3.05vh;
+}
+
+#hide-text-for-screenshot {
+  color: white;
+  position: absolute;
+  right: 51vw;
+  bottom: 3.1vh;
+}
+
+/* Controllers Page */
+#blur-window {
+  position: absolute;
+  z-index: 2;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, .5);
+}
+
+#controllers-page-popup-window {
+  width: 90vw;
+  height: 85vh;
+  margin-top: 7.5vh;
+  margin-left: 5vw;
+  background-color: #4d4d4d;
+}
+
+#header-container {
+  position: relative;
+  width: 5%;
+  height: 10%;
+  margin-left: 3vw;
+}
+
+#joycon-icon {
+  width: 100%;
+  transform: rotate(45deg);
+}
+
+#controllers-header-text {
+  font-size: 2vw;
+  color: white;
+  top: 50%;
+  left: 200%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#controllers-page-horizontal-line {
+  border-top: .1vh solid white;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+#switch-console-icon-container {
+  width: 65%;
+  height: 90%;
+  float: left;
+  position: relative;
+}
+
+#controllers-nintendo-switch-picture {
+  width: 20vw;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#controllers-console-text {
+  font-size: 2vw;
+  color: #a6a6a6;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#controller-battery-container {
+  width: 30vw;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+}
+
+#controller-battery {
+  width: 3vw;
+  margin-right: 1.1vw;
+  margin-left: 1.1vw;
+}
+
+#controllers-page-horizontal-line-small {
+  border-top: .1vh solid white;
+  width: 95%;
+  position: absolute;
+  top: 80%;
+  left: 2.5%;
+}
+
+#controller-page-white-text {
+  color: white;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#controllers-option-text-container {
+  width: 35%;
+  height: 89.85%;
+  float: left;
+  background-image: linear-gradient(to top, #595959, #4d4d4d);
+}
+
+#controllers-blue-text {
+  font-size: 2vw;
+  color: #99ffff;
+  margin-top: 7vh;
+  margin-left: 2vw;
+  margin-right: 3vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 1vw;
+  border: .35vw solid rgba(0, 0, 0, 0);
+}
+
+#controllers-blue-text:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+  background-color: rgb(0, 0, 0, .3);
+}
+
+#pairing-new-controllers-page {
+  width: 90vw;
+  height: 85vh;
+  margin-top: 7.5vh;
+  margin-left: 5vw;
+  background-color: #4d4d4d;
+  position: absolute;
+  display: none;
+}
+
+#pairing-new-controllers-page-header {
+  text-align: center;
+  color: white;
+  line-height: .5;
+}
+
+#pairing-new-controllers-page-subtext {
+  text-align: center;
+  font-size: 2vw;
+  color: #a6a6a6;
+  line-height: 0;
+}
+
+#pairing-new-controllers-switch-picture {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+}
+
+#pairing-new-controllers-page-done-container {
+  text-align: center;
+}
+
+#pairing-new-controllers-page-done-text {
+  font-size: 2vw;
+  color: white;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  padding: 2vh 14vw;
+  transform: translate(-50%, -50%);
+  border: .35vw solid white;
+}
+
+#pairing-new-controllers-page-done-text:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+  background-color: rgb(0, 0, 0, .3);
+}
+
+#pairing-methods-text {
+  font-size: 1.5vw;
+  color: white;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  padding: 2vh 2vw;
+  transform: translate(-50%, -50%);
+  border: .35vw solid white;
+}
+
+#pairing-methods-text:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+  background-color: rgb(0, 0, 0, .3);
+}
+
+#other-pairing-methods-page {
+  width: 90vw;
+  height: 85vh;
+  margin-top: 7.5vh;
+  margin-left: 5vw;
+  background-color: #4d4d4d;
+  position: absolute;
+  display: none;
+}
+
+#usb-connector-container {
+  width: 82vw;
+  height: 25vh;
+  margin: auto;
+  margin-top: 6vh;
+  background-color: gray;
+}
+
+#pairing-controllers-wirelessly-container {
+  width: 82vw;
+  height: 32vh;
+  margin: auto;
+  margin-top: 2vh;
+  background-color: gray;
+}
+
+#pairing-methods-page-header {
+  font-size: 2vw;
+  margin-left: 4vw;
+  padding-top: 2vh;
+  color: white;
+}
+
+#pairing-methods-page-text {
+  font-size: 1.2vw;
+  margin-left: 4vw;
+  margin-bottom: 2vh;
+  color: white;
+}
+
+#pairing-methods-page-close-container {
+  text-align: center;
+  margin-top: 7vh;
+}
+
+#pairing-methods-page-close-text {
+  font-size: 2vw;
+  color: white;
+  padding: 2vh 12vw;
+  border: .35vw solid white;
+}
+
+#pairing-methods-page-close-text:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+  background-color: rgb(0, 0, 0, .3);
+}
+
+#list-with-no-indent {
+  padding-left: 1vw;
+}
+
+#pairing-controller-switch-top {
+  float: right;
+  width: 22vw;
+}
+
+#pairing-controller-switch-bottom {
+  float: right;
+  width: 22vw;
+}
+
+#find-controllers-page {
+  width: 90vw;
+  height: 85vh;
+  margin-top: 7.5vh;
+  margin-left: 5vw;
+  background-color: #4d4d4d;
+  position: absolute;
+  display: none;
+}
+
+#find-controllers-page-header {
+  color: white;
+  text-align: center;
+  line-height: 0;
+  margin-top: 6vh;
+}
+
+#find-controllers-page-subtext {
+  font-size: 2vw;
+  color: gray;
+  text-align: center;
+  line-height: 0;
+}
+
+#find-controllers-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
+  grid-template-rows: 24vh 24vh;
+  grid-gap: 0.5vw;
+}
+
+#controller-grid-item {
+  background-color: #999999;
+  border: .1vw solid rgba(0, 0, 0, 0.8);
+  padding: 1vw;
+}
+
+#controller-grid-empty {
+  background-color: #595959;
+  border: .1vw solid rgba(0, 0, 0, 0.8);
+  padding: 1vw;
+}
+
+#find-controllers-bottom-text-grid {
+  display: grid;
+  margin-top: 6vh;
+  grid-template-columns: 30vw 30vw;
+  grid-template-rows: 8vh;
+  grid-gap: 4vw;
+  justify-content: center;
+  align-content: center;
+}
+
+#find-controllers-bottom-text {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .35vw solid white;
+}
+
+#question-mark-circle {
+  width: 2.5vw;
+  margin-right: 1vw;
+}
+
+#find-controllers-bottom-text:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+  background-color: rgb(0, 0, 0, .3);
+}
+
+#find-controller-left-joycon {
+  margin-left: 3vw;
+  width: 5vw;
+}
+
+#find-controller-right-joycon {
+  width: 6.5vw;
+  margin-left: 2vw;
+}
+
+#inside-grid-text {
+  font-size: 1vw;
+  color: white;
+  line-height: 0;
+  text-align: center;
+}
+
+#controllers-cant-be-found-page {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .7);
+}
+
+#controllers-cant-be-found-contrainer {
+  width: 55vw;
+  height: 80vh;
+  margin: auto;
+  margin-top: 10vh;
+  background-color: #4d4d4d;
+  padding-top: .1vh;
+}
+
+#controllers-cant-be-found-text {
+  width: 45vw;
+  height: 65vh;
+  margin-left: 5vw;
+  margin-top: 4vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#controllers-cant-be-found-text::-webkit-scrollbar {
+  display: none;
+}
+
+#controllers-cant-be-found-ok-container {
+  width: 100%;
+  height: 6.7vh;
+  margin-top: 4vh;
+  border-top: .1vw solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#controllers-cant-be-found-ok-text {
+  font-size: 4.5vh;
+  color: #99ffff;
+}
+
+#controllers-cant-be-found-bullet-text {
+  font-size: 2vw;
+  color: white;
+  margin-bottom: 4vh;
+}
+
+#controllers-cant-be-found-dash-text {
+  font-size: 1.7vw;
+  color: white;
+  margin-bottom: 2vh;
+  margin-left: 1vw;
+  list-style: none;
+}
+
+#controllers-cant-be-found-dash-text::before {
+  content: "-";
+}
+
+#change-grib-order-page {
+  display: none;
+  grid-template-columns: 100vw;
+  grid-template-rows: 25vh 65vh 10vh;
+}
+
+#change-grib-order-header {
+  border: .1vw solid rgba(0, 0, 0, 0.8);
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#change-grib-order-body {
+  background-color: white;
+  border: .1vw solid rgba(0, 0, 0, 0.8);
+  padding: 1vw;
+}
+
+#change-grib-order-footer {
+  border: .1vw solid rgba(0, 0, 0, 0.8);
+  padding: 1vw;
+}
+
+#change-grib-order-header-pic {
+  width: 50vw;
+}
+
+#change-grib-order-body-top-text {
+  font-size: 3vw;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+#change-grib-order-body-top-grid {
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw;
+  grid-template-rows: 40vh;
+  justify-content: center;
+  text-align: center;
+}
+
+#change-grib-order-body-top-grid-box {
+  border: .1vw solid rgba(0, 0, 0, 0.8);
+  margin-right: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+  margin-top: 5vh;
+  color: gray;
+}
+
+#change-grib-order-body-top-text-2 {
+  font-size: 2.5vw;
+  text-align: center;
+  margin-top: 3.5vh;
+}
+
+#minus-button-find-controller {
+  width: 1.5vw;
+}
+
+#change-grib-order-body-bottom-text {
+  font-size: 2vw;
+  color: white;
+}
+
+#b-button-find-controller {
+  width: 1.5vw;
+}
+
+#change-grib-order-footer-container {
+  float: right;
+}
+
+#change-grib-order-body-bottom-spacer {
+  margin-right: 4vw;
+}
+
+#l-button-find-controller {
+  width: 4vw;
+  vertical-align:middle;
+}
+
+#a-button-purple-find-controller {
+  width: 4vw;
+  vertical-align:middle;
+}
+
+/* Settings Page */
+#settings-page-main-container {
+  position: absolute;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(43, 43, 43);
+}
+
+#settings-header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 90vh;
+  left: 0;
+  right: 0;
+}
+
+#settings-icons-small {
+  position: absolute;
+  top: 3vh;
+  left: 5vw;
+  width: 3vw;
+}
+
+#system-settings-heading-text {
+  position: absolute;
+  top: 4vh;
+  left: 8.5vw;
+  font-size: 2vw;
+  color: white;
+}
+
+#Settings-page {
+  position: absolute;
+  z-index: 2;
+  top: 10.5vh;
+  bottom: 12vh;
+  left: 0;
+  right: 0;
+}
+
+#settings-page-horizontal-lines {
+  position: absolute;
+  z-index: 1;
+  top: 9.9vh;
+  bottom: 11.9vh;
+  left: 2.5vw;
+  right: 2.5vw;
+  border-top: .1vh solid white;
+}
+
+#settings-page-horizontal-lines-2 {
+  position: absolute;
+  z-index: 2;
+  top: 87.9vh;
+  bottom: 12.1vh;
+  left: 2.5vw;
+  right: 2.5vw;
+  border-top: .1vh solid white;
+}
+
+#settings-left-scroll-containers {
+  position: absolute;
+  z-index: 1;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 70vw;
+  background-image: linear-gradient(to right, rgb(43, 43, 43) , #333333);
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#settings-left-scroll-containers::-webkit-scrollbar {
+  display: none;
+}
+
+.settings-option-text {
+  font-size: 2vw;
+  margin-left: 7vw;
+  color: white;
+  border-left: .3vw solid rgba(0, 0, 0, 0);
+  padding-left: .5vw;
+}
+
+#registered-sign {
+  font-size: 1vw;
+  vertical-align: super;
+}
+
+#support-health {
+  font-size: 2vw;
+  margin-left: 7vw;
+  color: white;
+  border-left: .3vw solid rgba(0, 0, 0, 0);
+  padding-left: .5vw;
+}
+
+#settings-text-horizontal-lines {
+  border-top: .1vh solid gray;
+  width: 75%;
+  margin-left: 20%;
+}
+
+#settings-right-scroll-containers {
+  position: absolute;
+  z-index: 1;
+  top:0;
+  bottom: 0;
+  left: 30vw;
+  right: 0;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#settings-right-scroll-containers::-webkit-scrollbar {
+  display: none;
+}
+
+#settings-font-1 {
+  font-size: 1.2vw;
+  color: white;
+  margin-right: 4.5vw;
+  margin-left: 5vw;
+}
+
+#settings-font-2 {
+  font-size: 1.2vw;
+  color: white;
+}
+
+#off-font {
+  font-size: 1.2vw;
+  color: gray;
+  float: right;
+  margin-right: 8vw;
+  margin-top: 1vh;
+}
+
+#on-font {
+  font-size: 1.2vw;
+  color: #99ffff;
+  float: right;
+  margin-right: 8vw;
+  margin-top: 1vh;
+}
+
+#settings-gray-text {
+  font-size: 1.2vw;
+  color: #a6a6a6;
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+#support-container {
+  display: block;
+}
+
+#airplane-mode-container {
+  display: none;
+}
+
+#screen-brightness-container {
+  display: none;
+}
+
+#screen-lock-container {
+  display: none;
+}
+
+#parental-controls-container {
+  display: none;
+}
+
+#internet-container {
+  display: none;
+}
+
+#data-management-container {
+  display: none;
+}
+
+#users-container {
+  display: none;
+}
+
+#mii-container {
+  display: none;
+}
+
+#amiibo-container {
+  display: none;
+}
+
+#themes-container {
+  display: none;
+}
+
+#notifications-container {
+  display: none;
+}
+
+#sleep-mode-settings-container {
+  display: none;
+}
+
+#controllers-and-sensors-container {
+  display: none;
+}
+
+#bluetooth-audio-container {
+  display: none;
+}
+
+#tv-settings-container {
+  display: none;
+}
+
+#system-options-container {
+  display: none;
+}
+
+#support-image {
+  width: 55vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#brightness-icon {
+  width: 2vw;
+  margin-left: 4.5vw;
+}
+
+.wrap {
+  width: 75%;
+  position: absolute;
+  top: 18%;
+  left: 14%;
+}
+
+.range {
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.range::-ms-tooltip {
+  display: none;
+}
+
+.track {
+  width: 100%;
+  height: 30%;
+  background: #999999;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.track-inner {
+  width: 0;
+  height: 100%;
+  background: #80ffd4;
+}
+
+.thumb {
+  width: 4%;
+  height: 4.5vh;
+  background: #737373;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  pointer-events: none;
+}
+
+#settings-text-horizontal-lines-right-side {
+  border-top: .1vh solid gray;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+#setting-font-header {
+  font-size: 2vw;
+  color: white;
+  margin-left: 5vw;
+}
+
+#adult-child-outline-image {
+  width: 4vw;
+  float: left;
+  margin-left: 4vw;
+  margin-right: 2vw;
+}
+
+#parental-video-thumbnail {
+  width: 12vw;
+  float: left;
+  margin-left: 4vw;
+  margin-right: 2vw;
+}
+
+#system-memory-container {
+  width: 35vw;
+  display: inline-block;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+#microsd-card-container {
+  width: 30vw;
+  display: inline-block;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+#progress-bar {
+  width: 22vw;
+  height: 1.5vh;
+  margin-bottom: .5vh;
+  margin-top: 1vh;
+  margin-left: 5vw;
+  border: .1vw solid white;
+}
+
+#filled-in-progress-bar {
+  width: 5vw;
+  height: 1.5vh;
+  background-color: white;
+}
+
+#profile-container {
+  position: relative;
+  width: 70vw;
+  height: 30vh;
+}
+
+#user-1 {
+  width: 11vw;
+  height: 28vh;
+  margin-left: 4vw;
+  position: absolute;
+}
+
+#user-2 {
+  width: 11vw;
+  height: 28vh;
+  margin-left: 16vw;
+  position: absolute;
+}
+
+#user-3 {
+  width: 11vw;
+  height: 28vh;
+  margin-left: 28vw;
+  position: absolute;
+}
+
+#settings-mario-picture {
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+
+#user-name-background {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:80%;
+  position: absolute;
+  background-color: rgba(128, 128, 128, 0.15);
+}
+
+#profile-name-in-users-tab {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5vw;
+}
+
+#mii-icon {
+  width: 100%;
+  height: 100%;
+}
+
+#mii-text-container {
+  width: 11vw;
+  height: 15vh;
+  margin-left: 4vw;
+  margin-top: 4vh;
+  position: relative;
+}
+
+#mii-discription-text {
+  font-size: 1.2vw;
+  width: 50vw;
+  color: white;
+  top: 0;
+  left: 12vw;
+  position: absolute;
+}
+
+#amiibo-icon {
+  width: 100%;
+  height: 100%;
+}
+
+#amiibo-text-container {
+  width: 22vw;
+  height: 15vh;
+  margin-left: 4vw;
+  margin-top: 4vh;
+  position: relative;
+}
+
+#amiibo-discription-text {
+  font-size: 1.2vw;
+  color: white;
+  top: 0;
+  left: 23vw;
+  position: absolute;
+  white-space: nowrap;
+}
+
+#white-theme {
+  width: 8vw;
+  height: 8vh;
+  background-color: white;
+  margin-left: 5vw;
+  position: relative;
+  border: .1vw solid gray;
+}
+
+#white-theme-text {
+  font-size: 2vw;
+  color: white;
+  top: 1.5vh;
+  left: 9vw;
+  position: absolute;
+  white-space: nowrap;
+}
+
+#black-theme {
+  width: 8vw;
+  height: 8vh;
+  background-color: black;
+  margin-left: 5vw;
+  position: relative;
+  border: .1vw solid gray;
+}
+
+#green-circle {
+  width: 3vw;
+  height: 6vh;
+  border-radius: 50%;
+  background-color: #80ffd4;
+  top: 50%;
+  left: 700%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#checkmark {
+  font-size: 2vw;
+  color: black;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Sleepmode Page */
+#tinted-window {
+  position: absolute;
+  z-index: 2;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+#popup-window {
+  position: absolute;
+  z-index: 2;
+  visibility: hidden;
+  left: 25%;
+  right: 25%;
+  top: 30%;
+  bottom: 30%;
+  background-color: #595959;
+}
+
+#top-text {
+  color: white;
+  font-size: 2.2vw;
+  text-align: left;
+  margin-left: 7%;
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+
+#middle-text {
+  color: white;
+  font-size: 2.2vw;
+  text-align: left;
+  margin-left: 7%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#bottom-text {
+  color: #cccccc;
+  font-size: 1.5vw;
+  text-align: left;
+  margin-left: 7%;
+  margin-top: 1vh;
+}
+
+#sleepmode-horizontal-line {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 79%;
+  bottom: 20%;
+  background-color: gray;
+}
+
+#exit-sleepmode-container {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 50%;
+  top: 79%;
+  bottom: 0;
+}
+
+#exit-sleepmode-container:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+}
+
+#back-sleepmode-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #99ffff;
+  font-size: 2vw;
+}
+
+#verticle-line-sleep-mode {
+  position: absolute;
+  z-index: 2;
+  left: 49.9%;
+  right: 49.9%;
+  top: 79%;
+  bottom: 0;
+  background-color: gray;
+}
+
+#enter-sleepmode-container {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  right: 0;
+  top: 79%;
+  bottom: 0;
+}
+
+#enter-sleepmode-container:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+}
+
+#sleepmode-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #99ffff;
+  font-size: 2vw;
+}
+
+#sleep {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  visibility: hidden;
+}
+
+@media screen and (max-height: 900px) {
+  div.wake-up-text {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  div.friend-suggestions-next-text-font {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  span.find-channel-font-size {
+    font-size: 2.1vw;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  span.news-footer-bottom-text {
+    font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  p.news-footer-bottom-text {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  p.friend-suggestions-next-text-font {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  div.news-footer-bottom-text {
+    font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  span.screenshot-footer-bottom-text {
+    font-size: 1.7vw;
+  }
+}

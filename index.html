@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nintendo Switch</title>
+</head>
+
+<body>
+    <div id="bootup-background">
+        <img id="nintendo-logo-bootup" src="images/nintendo-logo.png" alt="Switch Logo">
+        <img id="switch-logo-bootup" src="images/nintendo-switch-logo-white.png" alt="Switch Logo">
+    </div>
+    <div id="wakeup-screen">
+        <div id="left-side-wakeup-screen">
+            <img src="images/news-pic-1.png" id="first-thumbnail" onclick="expandFeaturedNews(this)">
+            <img src="images/news-pic-2.png" id="second-thumbnail" onclick="expandFeaturedNews(this)">
+            <img src="images/news-pic-3.png" id="third-thumbnail" onclick="expandFeaturedNews(this)">
+            <img src="images/y-button.png" id="y-button-icon" onclick="expandAllFeaturedNews()">
+            <div class="wake-up-text" id="featured-news-text" onclick="expandAllFeaturedNews()">Featured News</div>
+            <img src="images/b-button.png" id="left-side-wakeup-b-button" onclick="shrinkAllFeaturedNews()">
+            <div id="left-side-wakeup-back-text" onclick="shrinkAllFeaturedNews()">Back</div>
+            <div id="left-side-wakeup-three-times-text">Press the same button three times.</div>
+            <div id="left-side-wakeup-white-circle-1"></div>
+            <div id="left-side-wakeup-white-circle-2"></div>
+            <div id="left-side-wakeup-white-circle-3"></div>
+        </div>
+        <div id="right-side-wakeup-screen">
+            <div id="MyClockDisplay"></div>
+            <div id="AMPM"></div>
+            <img src="images/Wifi.png" id="wifi-icon">
+            <img src="images/battery.png" id="battery-icon">
+            <img src="images/home-icon.png" id="home-icon" onclick="expandWakeupWindow()">
+            <img src="images/a-button.png" id="a-button" onclick="expandWakeupWindow()">
+            <div class="wake-up-text" id="continue-text" onclick="expandWakeupWindow()">Continue</div>
+            <img src="images/b-button.png" id="b-button" onclick="shrinkWakeupWindow()">
+            <div id="back-text" onclick="shrinkWakeupWindow()">Back</div>
+            <div id="three-times-text">Press the same button three times.</div>
+            <div id="white-circle-1"></div>
+            <div id="white-circle-2"></div>
+            <div id="white-circle-3"></div>
+        </div>
+    </div>
+
+    
+    <div id="home-background">
+        <div id="home-top-container">
+            <img id="mario-profile" src="images/mario-profile.jpg" alt="mario-profile-text" onclick="selectedIcon(this)">
+            <img id="yoshi-profile" src="images/yoshi-profile.png" alt="yoshi-profile-text" onclick="selectedIcon(this)">
+            <img id="fox-profile" src="images/fox-profile.png" alt="fox-profile-text" onclick="selectedIcon(this)">
+            <span id="MyClockDisplay-home" onload="showTime()"></span>
+            <span id="AMPM-home"></span>
+            <img id="wifi-icon-home" src="images/Wifi.png">
+            <img id="battery-icon-home" src="images/battery.png">
+            <p id="mario-profile-text">Mario's Page</p>
+            <p id="yoshi-profile-text">Yoshi's Page</p>
+            <p id="fox-profile-text">Fox's Page</p>
+            <div id="game-scroll-container">
+                <div id="game-grid-cover"></div>
+                <div id="game-cover-container">
+                    <p id="zelda-grid-cover-text">The Legend of Zelda: Breath of the Wild</p>
+                    <img src="images/zelda-cover.jpg" id="game-grid-cover" alt="zelda-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+                <div id="game-cover-container">
+                    <p id="splatoon-grid-cover-text">Splatoon 3</p>
+                    <img src="images/splatoon-cover.jpg" id="game-grid-cover" alt="splatoon-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+                <div id="game-cover-container">
+                    <p id="fire-emblem-grid-cover-text">Fire Emblem: Three Houses</p>
+                    <img src="images/fire-emblem-cover.jpg" id="game-grid-cover" alt="fire-emblem-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+                <div id="game-cover-container">
+                    <p id="super-smash-grid-cover-text">Super Smash Bros. Ultimate</p>
+                    <img src="images/super-smash-cover.jpg" id="game-grid-cover" alt="super-smash-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+                <div id="game-cover-container">
+                    <p id="xenoblade-3-grid-cover-text">Xenoblade Chronicles 3</p>
+                    <img src="images/xenoblade-3-cover.png" id="game-grid-cover" alt="xenoblade-3-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+                <div id="game-cover-container">
+                    <p id="mario-rabbids-grid-cover-text">Mario + Rabbids: Kingdom Battle</p>
+                    <img src="images/mario-rabbids-cover.png" id="game-grid-cover" alt="mario-rabbids-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+                <div id="game-cover-container">
+                    <p id="metroid-dread-grid-cover-text">Metroid Dread</p>
+                    <img src="images/metroid-dread-cover.png" id="game-grid-cover" alt="metroid-dread-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+                <div id="game-cover-container">
+                    <p id="no-more-heroes-3-grid-cover-text">No More Heroes 3</p>
+                    <img src="images/no-more-heroes-3-cover.jpg" id="game-grid-cover" alt="no-more-heroes-3-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+                <div id="game-cover-container">
+                    <p id="monster-hunter-rise-grid-cover-text">Monster Hunter Rise</p>
+                    <img src="images/monster-hunter-rise-cover.png" id="game-grid-cover" alt="monster-hunter-rise-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+                <div id="game-cover-container">
+                    <p id="super-mario-odyssey-grid-cover-text">Super Mario Odyssey</p>
+                    <img src="images/super-mario-odyssey-cover.png" id="game-grid-cover" alt="super-mario-odyssey-grid-cover-text" onclick="selectedIcon(this)">
+                </div>
+            </div>
+            <div id="switch-home-page-icons-container">
+                <div id="switch-online-container">
+                    <img id="switch-online-icon" src="images/switchOnline.png" alt="switch-online-icon-text" onclick="selectedIcon(this)">
+                    <p id="switch-online-icon-text">Nintendo Switch Online</p>
+                </div>
+                <div id="news-icon-container">
+                    <img id="news-icon" src="images/news.jpg" alt="news-icon-text" onclick="selectedIcon(this)">
+                    <p id="news-icon-text">News</p>
+                </div>
+                <div id="eShop-icon-container">
+                    <img id="eShop-icon" src="images/eShop.jpg" alt="eShop-icon-text" onclick="selectedIcon(this)">
+                    <p id="eShop-icon-text">Nintendo eShop</p>
+                </div>
+                <div id="album-icon-container">
+                    <img id="album-icon" src="images/album.jpg" alt="album-icon-text" onclick="selectedIcon(this)">
+                    <p id="album-icon-text">Album</p>
+                </div>
+                <div id="controllers-icon-container">
+                    <img id="controllers-icon" src="images/controllers.jpg" alt="controllers-icon-text" onclick="selectedIcon(this)">
+                    <p id="controllers-icon-text">Controllers</p>
+                </div>
+                <div id="settings-icon-container">
+                    <img id="settings-icon" src="images/settings.jpg" alt="settings-icon-text" onclick="selectedIcon(this)">
+                    <p id="settings-icon-text">System Settings</p>
+                </div>
+                <div id="sleepmode-icon-container">
+                    <img id="sleepmode-icon" src="images/sleepmode.jpg" alt="sleepmode-icon-text" onclick="selectedIcon(this)">
+                    <p id="sleepmode-icon-text">Sleep Mode</p>
+                </div>
+            </div>
+        </div>
+        <div id="home-horizontal-line"></div>
+        <div id="home-bottom-container">
+            <div id="area-above-horizontal-line"></div>
+            <div id="horizontal-line"></div>
+            <img id="switch-icon" src="images/switch-icon.png">
+            <img src="images/a-button.png" id="home-a-button">
+            <span id="home-ok-text">OK</span>
+        </div>
+    </div>
+
+
+    <div id="profile-page-container">
+        <div id="profile-page-top-container">
+            <img id="profile-page-mario-profile" src="images/mario-profile.jpg">
+            <span id="profile-page-name">Mario's Page</span>
+        </div>
+        <div id="profile-page-horizontal-line"></div>
+        <div id="profile-page-body-container">
+            <div id="profile-page-left-body-container">
+                <div id="profile-page-navigation-main-text" onclick="selectedProfileNavigationText(this);openProfileTab()">Profile</div>
+                <div id="profile-page-navigation-horizontal-line"></div>
+                <div id="profile-page-navigation-text" onclick="selectedProfileNavigationText(this);openFriendListTab()">Friend List<p id="profile-page-friends-online-text">Online: 0</p></div>
+                <div id="profile-page-navigation-text" onclick="selectedProfileNavigationText(this);openTrendingTab()">Trending</div>
+                <div id="profile-page-navigation-text" onclick="selectedProfileNavigationText(this);openOnlinePlayInvitesTab()">Online Play Invites</div>
+                <div id="profile-page-navigation-text" onclick="selectedProfileNavigationText(this);openFriendSuggestionsTab()">Friend Suggestions</div>
+                <div id="profile-page-navigation-text" onclick="selectedProfileNavigationText(this);openAddFriendTab()">Add Friend</div>
+                <div id="profile-page-navigation-horizontal-line"></div>
+                <div id="profile-page-navigation-text" onclick="selectedProfileNavigationText(this);openUserSettingsTab()">User Settings</div>
+            </div>
+            <div id="profile-page-right-body-container">
+                <div id="profile-page-profile-tab-container">
+                    <img src="images/mario-profile.jpg" id="profile-tab-mario-pic">
+                    <div id="profile-page-profile-tab-horizontal-line-1"></div>
+                    <p id="mario-profile-tab-name">Mario</p>
+                    <img src="images/pencil-icon.png" id="profile-pencil-icon">
+                    <div id="profile-page-profile-tab-horizontal-line-2"></div>
+                    <p id="profile-tab-text">Offline</p>
+                    <img src="images/question-mark-circle.png" id="profile-tab-question-mark-circle-1">
+                    <div id="profile-page-profile-tab-horizontal-line-2"></div>
+                    <p id="profile-tab-text-2">Friend Code: AA-9999-9999-9999</p>
+                    <p id="profile-tab-play-activity-text">Play Activity</p>
+                    <img src="images/question-mark-circle.png" id="profile-tab-question-mark-circle-2">
+                    <div id="profile-page-profile-tab-horizontal-line-3"></div>
+                    <img src="images/xenoblade-3-cover.png" id="profile-page-game-cover">
+                    <p id="profile-page-game-title">Xenoblade Chronicles 3</p>
+                    <p id="profile-page-game-time">Played for 80 hours or more</p>
+                    <div id="profile-page-profile-tab-horizontal-line-3"></div>
+                    <img src="images/metroid-dread-cover.png" id="profile-page-game-cover">
+                    <p id="profile-page-game-title">Metroid Dread</p>
+                    <p id="profile-page-game-time">Played for 20 hours or more</p>
+                    <div id="profile-page-profile-tab-horizontal-line-3"></div>
+                    <img src="images/no-more-heroes-3-cover.jpg" id="profile-page-game-cover">
+                    <p id="profile-page-game-title">No More Heroes 3</p>
+                    <p id="profile-page-game-time">Played for 30 hours or more</p>
+                    <div id="profile-page-profile-tab-horizontal-line-3"></div>
+                    <img src="images/splatoon-cover.jpg" id="profile-page-game-cover">
+                    <p id="profile-page-game-title">Splatoon 3</p>
+                    <p id="profile-page-game-time">Played for 10 hours or more</p>
+                    <div id="profile-page-profile-tab-horizontal-line-3"></div>
+                    <img src="images/super-smash-cover.jpg" id="profile-page-game-cover">
+                    <p id="profile-page-game-title">Super Smash Bros. Ultimate</p>
+                    <p id="profile-page-game-time">Played for 60 hours or more</p>
+                    <div id="profile-page-profile-tab-horizontal-line-3"></div>
+                </div>
+                <div id="profile-page-friend-list-container">
+                    <div id="friend-list-grid">
+                        <img src="images/luigi-profile.png" id="friend-list-grid-profile-pic">
+                        <img src="images/peach-profile.png" id="friend-list-grid-profile-pic-2">
+                        <img src="images/donkey-kong-profile.png" id="friend-list-grid-profile-pic-3">
+                        <img src="images/bowser-profile.png" id="friend-list-grid-profile-pic-4">
+                    </div>
+                    <div id="friend-list-grid-2">
+                        <div id="friend-list-grid-item">
+                            <p id="friend-list-profile-name">Luigi</p>
+                            <p id="friend-list-offline-text">Offline</p>
+                        </div>
+                        <div id="friend-list-grid-item">
+                            <p id="friend-list-profile-name">Peach</p>
+                            <p id="friend-list-offline-text">Offline</p>
+                        </div>
+                        <div id="friend-list-grid-item">
+                            <p id="friend-list-profile-name">Donkey Kong</p>
+                            <p id="friend-list-offline-text">Offline</p>
+                        </div>
+                        <div id="friend-list-grid-item">
+                            <p id="friend-list-profile-name">Koopa</p>
+                            <p id="friend-list-offline-text">Offline</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="profile-page-trending-container">
+                    <img src="images/white-smiley-face.png" id="white-smiley-face">
+                    <span id="trending-text-1">Check out what games are trending with your friends!</span>
+                    <div id="trending-grid">
+                        <div id="trending-picture-grid">
+                            <img src="images/zelda-cover.jpg" id="trending-game-cover">
+                            <div id="trending-friend-position-1">
+                                <img src="images/luigi-profile.png" id="trending-luigi-picture">
+                            </div>
+                            <div id="trending-friend-position-2">
+                                <img src="images/peach-profile.png" id="trending-peach-picture">
+                            </div>
+                            <div id="trending-friend-position-3">
+                                <img src="images/donkey-kong-profile.png" id="trending-donkeykong-picture">
+                            </div>
+                            <div id="trending-friend-position-4">
+                                <img src="images/bowser-profile.png" id="trending-koopa-picture">
+                            </div>
+                        </div>
+                        <div id="trending-picture-grid">
+                            <img src="images/fire-emblem-cover.jpg" id="trending-game-cover">
+                            <div id="trending-friend-position-1">
+                                <img src="images/luigi-profile.png" id="trending-luigi-picture">
+                            </div>
+                            <div id="trending-friend-position-2">
+                                <img src="images/peach-profile.png" id="trending-peach-picture">
+                            </div>
+                            <div id="trending-friend-position-3">
+                                <img src="images/donkey-kong-profile.png" id="trending-donkeykong-picture">
+                            </div>
+                            <div id="trending-friend-position-4">
+                                <img src="images/bowser-profile.png" id="trending-koopa-picture">
+                            </div>
+                        </div>
+                        <div id="trending-picture-grid">
+                            <img src="images/super-smash-cover.jpg" id="trending-game-cover">
+                            <div id="trending-friend-position-1">
+                                <img src="images/luigi-profile.png" id="trending-luigi-picture">
+                            </div>
+                            <div id="trending-friend-position-2">
+                                <img src="images/donkey-kong-profile.png" id="trending-donkeykong-picture">
+                            </div>
+                            <div id="trending-friend-position-3">
+                                <img src="images/bowser-profile.png" id="trending-koopa-picture">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="trending-text-grid">
+                        <p id="trending-text-2">Played by 4 Friends</p>
+                        <p id="trending-text-2">Played by 4 Friends</p>
+                        <p id="trending-text-2">Played by 3 Friends</p>
+                    </div>
+                    <div id="trending-grid">
+                        <div id="trending-picture-grid">
+                            <img src="images/xenoblade-3-cover.png" id="trending-game-cover">
+                            <div id="trending-friend-position-1">
+                                <img src="images/peach-profile.png" id="trending-peach-picture">
+                            </div>
+                            <div id="trending-friend-position-2">
+                                <img src="images/donkey-kong-profile.png" id="trending-donkeykong-picture">
+                            </div>
+                            <div id="trending-friend-position-3">
+                                <img src="images/bowser-profile.png" id="trending-koopa-picture">
+                            </div>
+                        </div>
+                        <div id="trending-picture-grid">
+                            <img src="images/mario-rabbids-cover.png" id="trending-game-cover">
+                            <div id="trending-friend-position-1">
+                                <img src="images/donkey-kong-profile.png" id="trending-donkeykong-picture">
+                            </div>
+                            <div id="trending-friend-position-2">
+                                <img src="images/bowser-profile.png" id="trending-koopa-picture">
+                            </div>
+                        </div>
+                        <div id="trending-picture-grid">
+                            <img src="images/metroid-dread-cover.png" id="trending-game-cover">
+                            <div id="trending-friend-position-1">
+                                <img src="images/peach-profile.png" id="trending-peach-picture">
+                            </div>
+                            <div id="trending-friend-position-2">
+                                <img src="images/bowser-profile.png" id="trending-koopa-picture">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="trending-text-grid">
+                        <p id="trending-text-2">Played by 3 Friends</p>
+                        <p id="trending-text-2">Played by 2 Friends</p>
+                        <p id="trending-text-2">Played by 2 Friends</p>
+                    </div>
+                    <div id="trending-grid">
+                        <div id="trending-picture-grid">
+                            <img src="images/splatoon-cover.jpg" id="trending-game-cover">
+                            <div id="trending-friend-position-1">
+                                <img src="images/luigi-profile.png" id="trending-luigi-picture">
+                            </div>
+                            <div id="trending-friend-position-2">
+                                <img src="images/peach-profile.png" id="trending-peach-picture">
+                            </div>
+                        </div>
+                        <div id="trending-picture-grid">
+                            <img src="images/no-more-heroes-3-cover.jpg" id="trending-game-cover">
+                            <div id="trending-friend-position-1">
+                                <img src="images/donkey-kong-profile.png" id="trending-donkeykong-picture">
+                            </div>
+                        </div>
+                        <div id="trending-picture-grid">
+                            <img src="images/monster-hunter-rise-cover.png" id="trending-game-cover">
+                            <div id="trending-friend-position-1">
+                                <img src="images/bowser-profile.png" id="trending-koopa-picture">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="trending-text-grid">
+                        <p id="trending-text-2">Played by 2 Friends</p>
+                        <p id="trending-text-2">Played by 1 Friends</p>
+                        <p id="trending-text-2">Played by 1 Friends</p>
+                    </div>
+                </div>
+                <div id="profile-page-online-play-invites-container">
+                    <div id="online-play-invites-text-container">
+                        <p id="online-play-invites-text">Invites from friends to join online play in supported software will be displayed here.</p>
+                    </div>
+                </div>
+                <div id="profile-page-friend-suggestions-container">
+                    <div id="friend-suggestions-top-container">
+                        <img src="images/l-button-with-arrow.png" id="l-button-with-arrow">
+                        <img src="images/phone-icon.png" id="phone-icon" onclick="selectedFriendSuggestions(this);openPhoneFriends()">
+                        <img src="images/facebook-icon.png" id="facebook-icon" onclick="selectedFriendSuggestions(this);openFacebookFriends()">
+                        <img src="images/twitter-icon.png" id="twitter-icon" onclick="selectedFriendSuggestions(this);openTwitterFriends()">
+                        <img src="images/3ds-icon.png" id="ds-icon" onclick="selectedFriendSuggestions(this);openDSFriends()">
+                        <img src="images/wii-u-icon.png" id="wii-u-icon" onclick="selectedFriendSuggestions(this);openWiiUFriends()">
+                        <img src="images/r-button-with-arrow-icon.png" id="r-button-with-arrow">
+                    </div>
+                    <div id="phone-container">
+                        <img src="images/friend-suggestions-pic-5.png" id="friend-suggestions-pic-1">
+                        <div id="facebook-text-container">Your Nintendo Mobile friends (<img src="images/white-smiley-face.png" id="friends-suggestions-smiley-face"></img>) can also become your friends on Nintendo Switch.</div>
+                        <div class="friend-suggestions-next-text-font" id="friend-suggestions-next-text">Next</div>
+                    </div>
+                    <div id="facebook-container">
+                        <img src="images/friend-suggestions-pic-1.png" id="friend-suggestions-pic-1">
+                        <div id="facebook-text-container">Your Facebook friends can also become your friends on Nintendo Switch.</div>
+                        <div class="friend-suggestions-next-text-font" id="friend-suggestions-next-text">Link to a Facebook account</div>
+                    </div>
+                    <div id="twitter-container">
+                        <img src="images/friend-suggestions-pic-4.png" id="friend-suggestions-pic-1">
+                        <div id="facebook-text-container">Your Twitter friends can also become your friends on Nintendo Switch.</div>
+                        <div class="friend-suggestions-next-text-font" id="friend-suggestions-next-text">Link to a Twitter account</div>
+                    </div>
+                    <div id="ds-container">
+                        <img src="images/friend-suggestions-pic-2.png" id="friend-suggestions-pic-1">
+                        <div id="facebook-text-container">Your Nintendo 3DS friends (<img src="images/white-smiley-face.png" id="friends-suggestions-smiley-face"></img>) can also become your friends on Nintendo Switch.</div>
+                        <div class="friend-suggestions-next-text-font" id="friend-suggestions-next-text">Next</div>
+                    </div>
+                    <div id="wii-u-container">
+                        <img src="images/friend-suggestions-pic-3.png" id="friend-suggestions-pic-1">
+                        <div id="facebook-text-container">Your Wii U friends (<img src="images/white-smiley-face.png" id="friends-suggestions-smiley-face"></img>) can also become your friends on Nintendo Switch.</div>
+                        <div class="friend-suggestions-next-text-font" id="friend-suggestions-next-text">Next</div>
+                    </div>
+                </div>
+                <div id="profile-page-add-friend-container">
+                    <div id="add-friend-horizontal-line"></div>
+                    <img src="images/friend-request-icon.png" id="friend-request-icon">
+                    <span id="received-friend-requests-text">Received Friend Requests</span>
+                    <div id="add-friend-horizontal-line-2"></div>
+                    <div id="add-friend-page-empty-space"></div>
+                    <div id="add-friend-horizontal-line"></div>
+                    <img src="images/local-users-icon.png" id="local-users-icon">
+                    <span id="search-local-users-text">Search for Local Users</span>
+                    <div id="add-friend-horizontal-line-2"></div>
+                    <img src="images/search-for-users-icon.png" id="friend-request-icon">
+                    <span id="received-friend-requests-text">Search for Users You Played With</span>
+                    <div id="add-friend-horizontal-line-2"></div>
+                    <img src="images/search-with-friend-code-icon.png" id="search-with-friend-code-icon">
+                    <span id="search-with-friend-code-text">Search with Friend Code</span>
+                    <div id="add-friend-horizontal-line-2"></div>
+                    <img src="images/sent-friend-request-icon.png" id="sent-friend-request-icon">
+                    <span id="sent-friend-requests-text">Sent Friend Requests</span>
+                    <div id="add-friend-horizontal-line-2"></div>
+                    <p id="add-friend-page-friend-code">Your friend code: AA-9999-9999-9999</p>
+                </div>
+                <div id="profile-page-user-settings-container">
+                    <p id="user-settings-text-with-left-border">Profile Settings</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Nickname <span id="user-settings-mario-text">Mario</span></p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <img src="images/mario-profile.jpg" id="user-settings-edit-icon-picture">
+                    <p id="user-settings-tab-text">Edit Icon</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Play Activity Settings</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-text-with-left-border">Nintendo Account <span id="user-settings-tab-text-3">(itsAme@mario.com)</span></p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Check Your Account information</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Display QR Code to Check In</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-text-with-left-border">Nintendo Switch Online</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Check Your Subscriptions</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-text-with-left-border">Nintendo eShop</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Nintendo eShop Settings</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text-2">Check your payment methods, redownloadable software, and more.</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Update Download Progress</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-text-with-left-border">Friend Functions</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Friend Settings</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Manage Blocked-User List</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-text-with-left-border">Album</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Posting to Social Media</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-text-with-left-border">User Support</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <p id="user-settings-tab-text">Number for Customer Support</p>
+                    <div id="user-settings-horizontal-line"></div>
+                    <div id="add-friend-page-empty-space"></div>
+                </div>
+            </div>
+        </div>
+        <div id="profile-page-horizontal-line"></div>
+        <div id="profile-page-bottom-container">
+            <img id="switch-icon" src="images/switch-icon.png">
+            <img src="images/a-button.png" id="home-a-button">
+            <span id="home-ok-text">OK</span>
+            <img src="images/b-button.png" id="home-b-button" onclick="closeProfilePage()">
+            <span id="back-home-text" onclick="closeProfilePage()">Back</span>
+        </div>
+    </div>
+
+
+    <div id="nintendo-switch-online-page-container">
+        <div id="nintendo-switch-online-page-tint"></div>
+        <div id="nintendo-switch-online-popup-container">
+            <div id="nintendo-switch-online-popup-top">
+                <p id="nintendo-switch-online-popup-top-text">The use of online services on this console is currently restricted by Nintendo.</p>
+            </div>
+            <div id="nintendo-switch-online-popup-bottom" onclick="closeNintendoSwitchOnline()">
+                <p id="nintendo-switch-online-popup-bottom-text">OK</p>
+            </div>
+        </div>
+        <div id="nintendo-switch-online-grid-1">
+            <img src="images/nintendo-switch-online-logo.png" id="nintendo-switch-online-logo">
+        </div>
+        <div id="nintendo-switch-online-grid-2"></div>
+        <div id="nintendo-switch-online-grid-3"></div>
+        <div id="nintendo-switch-online-grid-4"></div>
+        <div id="nintendo-switch-online-footer">
+            <img id="switch-icon" src="images/switch-icon-black.png">
+            <img src="images/a-button-black.png" id="home-a-button">
+            <span id="nintendo-switch-online-ok-text">OK</span>
+        </div>
+    </div>
+
+
+    <div id="news-page-container">
+        <div id="news-page-top-container">
+            <img src="images/news-page-icon.png" id="news-page-icon">
+            <span class="find-channel-font-size"  id="news-page-title">News</span>
+            <span class="find-channel-font-size" id="news-find-channels-text">Find Channels</span>
+            <img src="images/plus-button.png" id="news-page-plus-button">
+        </div>
+        <div id="news-page-horizontal-line"></div>
+        <div id="news-page-body-container">
+            <span id="news-page-section-header">Featured</span>
+            <div id="news-page-featured-grid">
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-1.png" id="news-pic">
+                    <p id="news-grid-text">Jack’s back for Halloween fun in Animal Crossing: Pocket Camp</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-2.png" id="news-pic">
+                    <p id="news-grid-text">Nintendo Power Podcast episode 53 available now!</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-3.png" id="news-pic">
+                    <p id="news-grid-text">Available now: The Elder Scrolls V: Skyrim Anniversary Edition Bundle</p>
+                </div>
+            </div>
+            <span id="news-page-section-header">Latest</span>
+            <div id="news-page-featured-grid">
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-4.png" id="news-pic">
+                    <p id="news-grid-text">Available now! Set out on a big adventure as a small fox in TUNIC</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-5.png" id="news-pic">
+                    <p id="news-grid-text">Experience two Life is Strange games in one remastered collection</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-6.png" id="news-pic">
+                    <p id="news-grid-text">Get ready to drum to the beat in Taiko no Tatsujin: Rhythm Festival</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-7.png" id="news-pic">
+                    <p id="news-grid-text">Save 30% on Pikmin™ 3 Deluxe!</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-8.png" id="news-pic">
+                    <p id="news-grid-text">Experience a gritty, strategic RPG with a twist in The DioField Chronicle</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-9.png" id="news-pic">
+                    <p id="news-grid-text">Fall Guys Season 2: Satellite Scramble is ready for liftoff!</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-10.png" id="news-pic">
+                    <p id="news-grid-text">A new free-to-play experience with 35 incredible heroes, 22 global maps, 6 distinct modes and more. Jump in Overwatch 2 on Oct. 4.</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-11.png" id="news-pic">
+                    <p id="news-grid-text">Check out what’s new in Fortnite Chapter 3 Season 4: Paradise!</p>
+                </div>
+                <div id="news-page-body-grid-cell">
+                    <img src="images/news-pic-12.png" id="news-pic">
+                    <p id="news-grid-text">Nintendo Switch Online + Expansion Pack: SEGA Genesis games for September</p>
+                </div>
+            </div>
+        </div>
+        <div id="news-page-horizontal-line"></div>
+        <div id="news-page-bottom-container">
+            <img id="switch-icon" src="images/switch-icon.png">
+            <img src="images/a-button.png" id="home-a-button">
+            <span id="home-ok-text">OK</span>
+            <img src="images/b-button.png" id="home-b-button" onclick="closeNewsPage()">
+            <span id="back-home-text" onclick="closeNewsPage()">Back</span>
+            <img src="images/x-button.png" id="news-x-button">
+            <span class="news-footer-bottom-text" id="bookmark-news-text">Bookmark List</span>
+            <img src="images/y-button.png" id="news-y-button">
+            <span class="news-footer-bottom-text" id="channel-list-text">Channel List</span>
+        </div>
+    </div>
+
+
+    <div id="eshop-page-container">
+        <div id="strip-1"></div>
+        <div id="strip-2"></div>
+        <div id="strip-3"></div>
+        <div id="strip-4"></div>
+        <div id="strip-5"></div>
+        <div id="strip-6"></div>
+        <div id="second-strips">
+            <div id="strip-7"></div>
+            <div id="strip-8"></div>
+            <div id="strip-9"></div>
+            <div id="strip-10"></div>
+            <div id="strip-11"></div>
+            <div id="strip-12"></div>
+        </div>
+        <div id="third-strips">
+            <div id="strip-13"></div>
+            <div id="strip-14"></div>
+            <div id="strip-15"></div>
+            <div id="strip-16"></div>
+            <div id="strip-17"></div>
+            <div id="strip-18"></div>
+        </div>
+        <div id="fourth-strips">
+            <div id="strip-19"></div>
+            <div id="strip-20"></div>
+            <div id="strip-21"></div>
+            <div id="strip-22"></div>
+            <div id="strip-23"></div>
+            <div id="strip-24"></div>
+        </div>
+        <div id="eshop-container">
+            <div id="eshop-container-left-side">
+                <img src="images/eshop-logo-word-only.png" id="eshop-logo-word-only">
+                <div id="magnifying-glass-container" onclick="openSearchPage(this)">
+                    <img src="images/magnifying-glass.png" id="magnifying-glass">
+                </div>
+                <div id="eshop-navigation-text" onclick="openRecentReleasesPage(this)">Recent Releases</div>
+                <div id="eshop-navigation-text" onclick="openCurrentOffersPage(this)">Current Offers</div>
+                <div id="eshop-navigation-text" onclick="openChartsPage(this)">Charts</div>
+                <div id="eshop-navigation-text" onclick="openComingSoonPage(this)">Coming Soon</div>
+                <div id="eshop-navigation-text" onclick="openRedeemCodePage(this)">Redeem Code</div>
+            </div>
+            <div id="eshop-container-right-side">
+                <div id="search-eshop-page">
+                    <img src="images/mario-profile.jpg" id="eshop-profile-picture">
+                    <span id="eshop-profile-sign">></span>
+                    <p id="recent-releases-page-title">Search</p>
+                    <p id="search-bar-sub-text">Filtered Search</p>
+                    <div id="filter-orange-circle">></div>
+                    <input type="text" placeholder="&#128269; Enter Keyword" id="eshop-search-bar">
+                </div>
+                <div id="recent-releases-page">
+                    <img src="images/mario-profile.jpg" id="eshop-profile-picture">
+                    <span id="eshop-profile-sign">></span>
+                    <p id="recent-releases-page-title">Recent Releases</p>
+                    <div id="recent-releases-game-grid">
+                        <div id="recent-releases-game-1">
+                            <img src="images/smash-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/splatoon-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/mario-kart-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$49.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/minecraft-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$29.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/luigi-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/animal-crossing-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/pokemon-arceus-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/mario-maker-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$49.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/xenoblade-3-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/zelda-links-awakening-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/mario-golf-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <img src="images/paper-mario-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="current-offers-page">
+                    <img src="images/mario-profile.jpg" id="eshop-profile-picture">
+                    <span id="eshop-profile-sign">></span>
+                    <p id="recent-releases-page-title">Current Offers</p>
+                    <div id="recent-releases-game-grid">
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-sale">50% OFF</span>
+                            <img src="images/astral-chain-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$29.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-sale">25% OFF</span>
+                            <img src="images/zelda-skyward-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$44.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-sale">50% OFF</span>
+                            <img src="images/fire-emblem-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$29.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-sale">25% OFF</span>
+                            <img src="images/marvel-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$44.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-sale">25% OFF</span>
+                            <img src="images/the-world-ends-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$44.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-sale">50% OFF</span>
+                            <img src="images/octopath-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$29.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-sale">75% OFF</span>
+                            <img src="images/mario-tennis-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$14.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-sale">50% OFF</span>
+                            <img src="images/donkey-kong-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$29.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-sale">75% OFF</span>
+                            <img src="images/bayonetta-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$14.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="charts-page">
+                    <img src="images/mario-profile.jpg" id="eshop-profile-picture">
+                    <span id="eshop-profile-sign">></span>
+                    <p id="recent-releases-page-title">Charts</p>
+                    <div id="recent-releases-game-grid">
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">1</span>
+                            <img src="images/smash-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">2</span>
+                            <span id="eshop-sale">25% OFF</span>
+                            <img src="images/the-world-ends-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$44.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">3</span>
+                            <span id="eshop-sale">75% OFF</span>
+                            <img src="images/mario-tennis-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$14.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">4</span>
+                            <img src="images/mario-golf-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">5</span>
+                            <img src="images/minecraft-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$29.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">6</span>
+                            <img src="images/mario-kart-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$49.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">7</span>
+                            <span id="eshop-sale">75% OFF</span>
+                            <img src="images/bayonetta-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$14.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">8</span>
+                            <img src="images/splatoon-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">9</span>
+                            <img src="images/luigi-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$59.99</span>
+                        </div>
+                        <div id="recent-releases-game-1">
+                            <span id="eshop-rank-position">10</span>
+                            <img src="images/mario-maker-eshop.png" id="eshop-game-banner">
+                            <span id="eshop-price">$49.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="coming-soon-page">
+                    <img src="images/mario-profile.jpg" id="eshop-profile-picture">
+                    <span id="eshop-profile-sign">></span>
+                    <p id="recent-releases-page-title">Coming Soon</p>
+                    <div id="coming-soon-game-grid">
+                        <div id="coming-soon-game">
+                            <img src="images/mario-rabbids-eshop.png" id="coming-soon-image">
+                            <span id="eshop-coming-soon-date">Release Date: 9/99/9999</span>
+                        </div>
+                        <div id="coming-soon-game">
+                            <img src="images/pokemon-scarlet-eshop.png" id="coming-soon-image">
+                            <span id="eshop-coming-soon-date">Release Date: 9/99/9999</span>
+                        </div>
+                        <div id="coming-soon-game">
+                            <img src="images/bayonetta-3-eshop.png" id="coming-soon-image">
+                            <span id="eshop-coming-soon-date">Release Date: 9/99/9999</span>
+                        </div>
+                        <div id="coming-soon-game">
+                            <img src="images/persona-eshop.png" id="coming-soon-image">
+                            <span id="eshop-coming-soon-date">Release Date: 9/99/9999</span>
+                        </div>
+                        <div id="coming-soon-game">
+                            <img src="images/zelda-tears-eshop.png" id="coming-soon-image">
+                            <span id="eshop-coming-soon-date">Release Date: 9/99/9999</span>
+                        </div>
+                        <div id="coming-soon-game">
+                            <img src="images/nier-eshop.png" id="coming-soon-image">
+                            <span id="eshop-coming-soon-date">Release Date: 9/99/9999</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="redeem-code-page">
+                    <img src="images/mario-profile.jpg" id="eshop-profile-picture">
+                    <span id="eshop-profile-sign">></span>
+                    <p id="recent-releases-page-title" onclick="getRedeemCode()">Redeem Code</p>
+                    <input type="code" placeholder="---- ---- ---- ----" maxlength="16" id="code-search-bar">
+                </div>
+            </div>
+            <div id="eshop-container-bottom-side">
+                <img src="images/switch-icon-black.png" id="eshop-switch-icon-black">
+                <img src="images/x-button-black.png" id="x-button-black" onclick="closeEshop()">
+                <span id="eshop-container-bottom-side-close" onclick="closeEshop()">Close</span>
+                <img src="images/b-button-black.png" id="b-button-black">
+                <span id="eshop-container-bottom-side-back">Back</span>
+                <img src="images/a-button-black.png" id="a-button-black">
+                <span id="eshop-container-bottom-side-confirm">Confirm</span>
+            </div>
+        </div>
+        <img src="images/eshop-logo.png" id="eshop-logo">
+    </div>
+
+
+    <div id="album-page-container">
+        <div id="album-page-header-container">
+            <img src="images/album-icon-white.png" id="album-icon-white">
+            <div id="album-header-text-main">Album</div>
+            <div id="album-header-text-sub">All Screenshots and Videos (5)</div>
+        </div>
+        <div id="album-page-top-horizontal-line"></div>
+        <div id="album-page-body-grid-container">
+            <div id="album-page-body-grid">
+                <div id="album-page-picture-grid"><img src="images/zelda-screenshot.png" id="screenshot-thumbnail" onclick="enlargeThumbnail(this)"></div>
+                <div id="album-page-picture-grid"><img src="images/smash-screenshot.jpg" id="screenshot-thumbnail" onclick="enlargeThumbnail(this)"></div>
+                <div id="album-page-picture-grid"><img src="images/animal-crossing-screenshot.png" id="screenshot-thumbnail" onclick="enlargeThumbnail(this)"></div>
+                <div id="album-page-picture-grid"><img src="images/kirby-screenshot.jpg" id="screenshot-thumbnail" onclick="enlargeThumbnail(this)"></div>
+                <div id="album-page-picture-grid"><img src="images/luigi-screenshot.jpg" id="screenshot-thumbnail" onclick="enlargeThumbnail(this)"></div>
+            </div>
+        </div>
+        <div id="album-page-top-horizontal-line"></div>
+        <div id="album-page-lower-container">
+            <img id="switch-icon" src="images/switch-icon.png">
+            <img src="images/b-button.png" id="home-b-button" onclick="closeSettings()">
+            <span id="back-home-text" onclick="closealbum()">Back</span>
+            <img src="images/a-button.png" id="home-a-button">
+            <span id="home-ok-text">OK</span>
+        </div>
+    </div>
+    <div id="screenshot-footer">
+        <img id="switch-icon-for-screenshot" src="images/switch-icon.png">
+        <img src="images/a-button.png" id="a-button-for-screenshot">
+        <span class="screenshot-footer-bottom-text" id="Sharing-text">Sharing and Editing</span>
+        <img src="images/b-button.png" id="b-button-for-screenshot" onclick="exitScreenshot()">
+        <span class="screenshot-footer-bottom-text" id="back-text-for-screenshot" onclick="exitScreenshot()">Back</span>
+        <img src="images/x-button.png" id="x-button-for-screenshot">
+        <span class="screenshot-footer-bottom-text" id="delete-text-for-screenshot">Delete</span>
+        <img src="images/plus-button.png" id="plus-button-for-screenshot" onclick="hideScreenshotfooter()">
+        <span class="screenshot-footer-bottom-text" id="hide-text-for-screenshot" onclick="hideScreenshotfooter()">Hide</span>
+    </div>
+
+
+    <div id="controllers-page-container">
+        <div id="blur-window">
+            <div id="controllers-page-popup-window">
+                <div id="header-container">
+                    <img src="images/joycon-icon.png" id="joycon-icon">
+                    <span id="controllers-header-text">Controllers</span>
+                </div>
+                <div id="controllers-page-horizontal-line"></div>
+                <div id="switch-console-icon-container">
+                    <p id="controllers-console-text">Console</p>
+                    <img src="images/nintendo-switch-controller-icon.png" id="controllers-nintendo-switch-picture">
+                    <div id="controller-battery-container">
+                        <img src="images/battery.png" id="controller-battery">
+                        <img src="images/battery.png" id="controller-battery">
+                        <img src="images/battery.png" id="controller-battery">
+                    </div>
+                    <div id="controllers-page-horizontal-line-small"></div>
+                    <p class="news-footer-bottom-text" id="controller-page-white-text">No other controllers are connected.</p>
+                </div>
+                <div id="controllers-option-text-container">
+                    <p id="controllers-blue-text" onclick="openChangeGripOrderPage()">Change Grip/Order</p>
+                    <p id="controllers-blue-text" onclick="openFindControllersPage()">Find Controllers</p>
+                    <p id="controllers-blue-text" onclick="openPairingNewControllersPage()">Pairing New Controllers</p>
+                    <p id="controllers-blue-text" onclick="closeControllersPage()">Close</p>
+                </div>
+            </div>
+            <div id="find-controllers-page">
+                <p class="friend-suggestions-next-text-font" id="find-controllers-page-header">Controllers will be searched for by activating the vibration feature.</p>
+                <p id="find-controllers-page-subtext">Press L or R on a nearby controller to make the selected controller vibrate.</p>
+                <div id="find-controllers-grid">
+                    <div id="controller-grid-item">
+                        <p id="inside-grid-text">Console</p>
+                        <img src="images/find-controller-left-joycon.png" id="find-controller-left-joycon">
+                    </div>
+                    <div id="controller-grid-item">
+                        <p id="inside-grid-text">Console</p>
+                        <img src="images/find-controller-right-joycon.png" id="find-controller-right-joycon">
+                    </div>
+                    <div id="controller-grid-empty"></div>
+                    <div id="controller-grid-empty"></div>
+                    <div id="controller-grid-empty"></div>
+                    <div id="controller-grid-empty"></div>
+                    <div id="controller-grid-empty"></div>
+                    <div id="controller-grid-empty"></div>
+                    <div id="controller-grid-empty"></div>
+                    <div id="controller-grid-empty"></div>
+                </div>
+                <div id="find-controllers-bottom-text-grid">
+                    <div id="find-controllers-bottom-text" onclick="closeFindControllersPage()">Back</div>
+                    <div class="news-footer-bottom-text" id="find-controllers-bottom-text" onclick="openControllersCantBeFoundPage()"><img src="images/question-mark-circle.png" id="question-mark-circle"> If Controllers Cant Be Found</div>
+                </div>
+            </div>
+            <div id="controllers-cant-be-found-page">
+                <div id="controllers-cant-be-found-contrainer">
+                    <div id="controllers-cant-be-found-text">
+                        <ul>
+                            <li id="controllers-cant-be-found-bullet-text">If a controller is on top of clothing or a soft object, like a pillow, the vibration may become difficult to hear. Please be quiet as possible during the searching process.</li>
+                            <li id="controllers-cant-be-found-bullet-text">Controllers that do not have a vibration feature cannot be searched for by using this method.</li>
+                            <li id="controllers-cant-be-found-bullet-text">If a controller is not vibrating, try moving the console closer to where you think it might be or try seaching for the controller using a different consoel. Controllers may bot vibrate if:</li>
+                            <li id="controllers-cant-be-found-dash-text">They are too far away from the console.</li>
+                            <li id="controllers-cant-be-found-dash-text">They are out of battery power or have low bettery power.</li>
+                            <li id="controllers-cant-be-found-dash-text">They are not paired to a console or are paired to a different console.</li>
+                        </ul>
+                    </div>
+                    <div id="controllers-cant-be-found-ok-container" onclick="closeControllersCantBeFoundPage()">
+                        <p id="controllers-cant-be-found-ok-text">OK</p>
+                    </div>
+                </div>
+            </div>
+            <div id="pairing-new-controllers-page">
+                <p class="friend-suggestions-next-text-font" id="pairing-new-controllers-page-header">You can pair controllers at any time by attaching them to the console.</p>
+                <p id="pairing-new-controllers-page-subtext">Once paired, you can use controllers even when they aren't attached to the console.</p>
+                <img src="images/pairing-new-controllers-switch-picture.png" id="pairing-new-controllers-switch-picture">
+                <div id="pairing-new-controllers-page-done-container">
+                    <p id="pairing-new-controllers-page-done-text" onclick="closePairingNewControllersPage()">Done</p>
+                </div>
+                <p id="pairing-methods-text" onclick="OpenotherPairingMethodsPage()">View Other Pairing Methods</p>
+            </div>
+            <div id="other-pairing-methods-page">
+                <div id="usb-connector-container">
+                    <p id="pairing-methods-page-header">Pairing controllers with a USB connector:
+                        <img src="images/pairing-controller-switch-top.png" id="pairing-controller-switch-top">
+                    </p>
+                    <p id="pairing-methods-page-text">Connect to the console using a USB charging cable.</p>
+                </div>
+                <div id="pairing-controllers-wirelessly-container">
+                    <p id="pairing-methods-page-header">Pairing controllers wirelessly:
+                        <img src="images/pairing-controller-switch-bottom.png" id="pairing-controller-switch-bottom">
+                    </p>
+                    <ol id="list-with-no-indent">
+                        <li id="pairing-methods-page-text">Close this screen and select Change Grip/Order.</li>
+                        <li id="pairing-methods-page-text">On the next screen, hold the SYNC Button.</li>
+                    </ol>
+                </div>
+                <div id="pairing-methods-page-close-container">
+                    <span id="pairing-methods-page-close-text" onclick="CloseotherPairingMethodsPage()">Close</span>
+                </div>
+            </div>
+            <div id="change-grib-order-page">
+                <div id="change-grib-order-header">
+                    <img src="images/change-grib-order-header-pic.png" id="change-grib-order-header-pic">
+                </div>
+                <div id="change-grib-order-body">
+                    <div id="change-grib-order-body-top-text">Press <img src="images/l-button.png" id="l-button-find-controller"> + <img src="images/r-button.png" id="l-button-find-controller"> on the computer</div>
+                    <div id="change-grib-order-body-top-grid">
+                        <div id="change-grib-order-body-top-grid-box">1</div>
+                        <div id="change-grib-order-body-top-grid-box">2</div>
+                        <div id="change-grib-order-body-top-grid-box">3</div>
+                        <div id="change-grib-order-body-top-grid-box">4</div>
+                    </div>
+                    <div id="change-grib-order-body-top-text-2">Press <img src="images/a-button-purple.png" id="a-button-purple-find-controller"> when you're ready.</div>
+                </div>
+                <div id="change-grib-order-footer">
+                    <div id="change-grib-order-footer-container">
+                        <img src="images/minus-button.png" id="minus-button-find-controller">
+                        <span id="change-grib-order-body-bottom-text">/</span>
+                        <img src="images/plus-button.png" id="minus-button-find-controller">
+                        <span id="change-grib-order-body-bottom-text">Controller Not Connected</span>
+                        <span id="change-grib-order-body-bottom-spacer"></span>
+                        <img src="images/minus-button.png" id="minus-button-find-controller">
+                        <span id="change-grib-order-body-bottom-text">/</span>
+                        <img src="images/plus-button.png" id="minus-button-find-controller">
+                        <span id="change-grib-order-body-bottom-text">(Hold) Search</span>
+                        <span id="change-grib-order-body-bottom-spacer"></span>
+                        <img src="images/b-button.png" id="b-button-find-controller" onclick="closeChangeGripOrderPage()">
+                        <span id="change-grib-order-body-bottom-text" onclick="closeChangeGripOrderPage()">Back</span>
+                        <span id="change-grib-order-body-bottom-spacer"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="settings-page-main-container">
+        <div id="settings-header">
+            <img src="images/setting-icon-small.png" id="settings-icons-small">
+            <span id="system-settings-heading-text">System Settings</span>
+        </div>
+        <div id="Settings-page">
+            <div id="settings-left-scroll-containers">
+                <p id="support-health" onclick="selectedSettingsOptions(this)">Support/Health &
+                    Safety</p>
+                <div id="settings-text-horizontal-lines"></div>
+                <p class="settings-option-text" id="airplane-mode" onclick="selectedSettingsOptions(this)">Airplane Mode</p>
+                <p class="settings-option-text" id="screen-brightness" onclick="selectedSettingsOptions(this)">Screen
+                    Brightness</p>
+                <p class="settings-option-text" id="screen-lock" onclick="selectedSettingsOptions(this)">Screen Lock</p>
+                <div id="settings-text-horizontal-lines"></div>
+                <p class="settings-option-text" id="parental-controls" onclick="selectedSettingsOptions(this)">Parental
+                    Control</p>
+                <p class="settings-option-text" id="internet-settings" onclick="selectedSettingsOptions(this)">Internet</p>
+                <p class="settings-option-text" id="data-management" onclick="selectedSettingsOptions(this)">Data Management
+                </p>
+                <p class="settings-option-text" id="users-settings" onclick="selectedSettingsOptions(this)">Users</p>
+                <p class="settings-option-text" id="mii-settings" onclick="selectedSettingsOptions(this)">Mii</p>
+                <p class="settings-option-text" id="amiibo-settings" onclick="selectedSettingsOptions(this)">amiibo</p>
+                <div id="settings-text-horizontal-lines"></div>
+                <p class="settings-option-text" id="themes-settings" onclick="selectedSettingsOptions(this)">Themes</p>
+                <p class="settings-option-text" id="notifications-settings" onclick="selectedSettingsOptions(this)">
+                    Notifications</p>
+                <p class="settings-option-text" id="sleep-mode-settings" onclick="selectedSettingsOptions(this)">Sleep Mode
+                </p>
+                <div id="settings-text-horizontal-lines"></div>
+                <p class="settings-option-text" id="controllers-and-sensors" onclick="selectedSettingsOptions(this)">
+                    Controllers and Sensors</p>
+                <p class="settings-option-text" id="bluetooth-audio-settings" onclick="selectedSettingsOptions(this)">
+                    Bluetooth<span id="registered-sign">&#174;</span> Audio</p>
+                <p class="settings-option-text" id="tv-settings" onclick="selectedSettingsOptions(this)">TV Settings</p>
+                <p class="settings-option-text" id="system-option-settings" onclick="selectedSettingsOptions(this)">Systems
+                </p>
+            </div>
+            <div id="settings-right-scroll-containers">
+                <div id="support-container">
+                    <p id="settings-font-1">For more information about how to use Nintendo Switch and its features, please
+                        refer to
+                        the Nintendo Support website on your smart device or PC.</p>
+                    <img src="images/support.png" id="support-image">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">&#9888; Safety Precautions</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Error History</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                </div>
+                <div id="airplane-mode-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Airplane Mode</span>
+                    <span id="off-font">Off</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">All wireless communication, such as Wi-Fi and Bluetooth, will be turned off.
+                        Some
+                        Types of Wireless communication can still be switched on manually when the console is in Airplane
+                        Mode.</p>
+                    <p id="settings-gray-text">&#9670; This can also be changed from Quick Settings (hold &#x2302;).</p>
+                </div>
+                <div id="screen-brightness-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Auto-Brightness</span>
+                    <span id="off-font">Off</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <img src="images/brightness-icon.png" id="brightness-icon">
+                    <div class="wrap">
+                        <input type="range" class="range" min="0" max="100" step="0.1" value="0">
+                        <div class="track">
+                            <div class="track-inner"></div>
+                        </div>
+                        <div class="thumb"></div>
+                    </div>
+                    <p id="settings-gray-text">&#9670; This can also be changed from Quick Settings (hold &#x2302;).</p>
+                </div>
+                <div id="screen-lock-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Lock Console in Sleep Mode</span>
+                    <span id="on-font">On</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Lock the console so that the same button must be pressed three times to
+                        proceed when
+                        you exit sleep mode. The console will not lock when connected to a TV.</p>
+                </div>
+                <div id="parental-controls-container">
+                    <img src="images/adult-child-outline.png" id="adult-child-outline-image">
+                    <p id="settings-font-1">Parental Controls can be used to restrict features of this console. Configure
+                        these on
+                        the console or using your smart device.<br></p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <img src="images/parental-thumbnail.png" id="parental-video-thumbnail">
+                    <p id="setting-font-header">Watch a Nintendo Switch Parental <br>Controls introductory Video</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Parental Controls Settings</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                </div>
+                <div id="internet-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Internet Settings</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Test Connection</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                </div>
+                <div id="data-management-container">
+                    <div id="system-memory-container">
+                        <span id="settings-font-1">System Memory</span>
+                        <div id="progress-bar">
+                            <div id="filled-in-progress-bar"></div>
+                        </div>
+                        <span id="settings-font-1">Free space</span>
+                        <span id="settings-font-1">24.1 GB</span>
+                    </div>
+                    <div id="microsd-card-container">
+                        <span id="settings-font-1">microSD Card</span>
+                        <div id="progress-bar">
+                            <div id="filled-in-progress-bar"></div>
+                        </div>
+                        <span id="settings-font-1">Free space</span>
+                        <span id="settings-font-1">24.1 GB</span>
+                    </div>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Move Data Between System / microSD Card</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Quick Archive</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Free up space by archiving the selected software.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Manage Software</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Save Data Cloud</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Transfer Your Save Data</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Manage Screenshots and Videos</span>
+                    <br>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Delete Save Data</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                </div>
+                <div id="users-container">
+                    <div id="profile-container">
+                        <div id="user-1">
+                            <img src="images/mario-profile.jpg" id="settings-mario-picture">
+                            <div id="user-name-background">
+                                <span id="profile-name-in-users-tab">Mario</span>
+                            </div>
+                        </div>
+                        <div id="user-2">
+                            <img src="images/yoshi-profile.png" id="settings-mario-picture">
+                            <div id="user-name-background">
+                                <span id="profile-name-in-users-tab">Yoshi</span>
+                            </div>
+                        </div>
+                        <div id="user-3">
+                            <img src="images/fox-profile.png" id="settings-mario-picture">
+                            <div id="user-name-background">
+                                <span id="profile-name-in-users-tab">Fox</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Change Order</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Add User</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Transfer Your User Data</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Communicate with another console to transfer the information and save data
+                        for a specific user.</p>
+                </div>
+                <div id="mii-container">
+                    <div id="mii-text-container">
+                        <img src="images/mii-icon.png" id="mii-icon">
+                        <span id="mii-discription-text">You can create your own custom Mii character. Mii characters can be
+                            used in compatible software.</span>
+                    </div>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Create/Edit a Mii</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                </div>
+                <div id="amiibo-container">
+                    <div id="amiibo-text-container">
+                        <img src="images/amiibo-icon.png" id="amiibo-icon">
+                        <span id="amiibo-discription-text">You can edit and delete data saved to amiibo.</span>
+                    </div>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Register Owner and Nickname</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Delete Game Data</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Reset amiibo</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                </div>
+                <div id="themes-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <div id="white-theme">
+                        <span id="white-theme-text">Basic White</span>
+                    </div>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <div id="black-theme">
+                        <span id="white-theme-text">Basic Black</span>
+                        <span id="green-circle">
+                            <span id="checkmark">&#10003;</span>
+                        </span>
+                    </div>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                </div>
+                <div id="notifications-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">"Download Complete" Notification</span>
+                    <span id="on-font">On</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Friend Notification</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Platinum Point Notifications</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Alarm Notification</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">After setting an alarm, you wil get a notification at the date and time of
+                        your choosing.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Notification Sound</span>
+                    <span id="on-font">On</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                </div>
+                <div id="sleep-mode-settings-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Auto-Sleep (Playing on Console Screen)</span>
+                    <span id="on-font">10min</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Auto-Sleep (Connected to TV)</span>
+                    <span id="on-font">1hr</span>
+                    <br>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Suspend Auto-Sleep While Playing Media Content</span>
+                    <span id="off-font">Off</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Prevents auto-sleep from activating while media content is playing. If this
+                        option is disabled, the console will still go to sleep after four hours of media playback.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Maintain Internet Connection in Sleep Mode</span>
+                    <span id="on-font">On</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">If this option is enabled, downloads initiated from your PC or smartphone
+                        will start right away, even when the console is in sleep mode. Disabling this option will reduce the
+                        console's energy consumption during sleep mode while connected to the internet.</p>
+                    <p id="settings-gray-text">&#9670; This will have an effect only when connected to the internet via
+                        wired connection.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Wake When AC Adapter Is Disconnected</span>
+                    <span id="on-font">On</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">If this option is enabled, the console will wake from sleep mode when it is
+                        removed from the dock.</p>
+                </div>
+                <div id="controllers-and-sensors-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Change Grip/Order</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Change Button Mapping</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">You can customize button mapping for each controller. Customized mapping
+                        configurations can be saved as presets for easy access in the future.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Controller Vibration</span>
+                    <span id="on-font">On</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">The vibration feature will be enabled on supporting controllers during
+                        gameplay. Vibration for alarm notifications can be changed in Notifications &#8658; Alarm
+                        Notifications.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Pro Controller Wired Communication</span>
+                    <span id="off-font">Off</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">If this option is enabled, the Nintendo Switch Pro Controller will
+                        communicate with the console via wired communication when connected to it using the USB charging
+                        cable. The NFC touchpoint on the Pro Controller will be disabled while the controller is using wired
+                        communication.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Update Controllers</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Update connected controllers.</p>
+                    <p id="settings-gray-text">Some controllers cannot be updated.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Calibrate Control Sticks</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Calibrate Motion Controls</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Touch-Screen Sensitivity</span>
+                    <span id="on-font">Standard</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Using the Stylus setting increases the sensitivity of the touch screen to
+                        enhance stylus controls.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Test Input Devices</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Check for problems with the controllers or the touch screen.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Disconnect Controllers</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                </div>
+                <div id="bluetooth-audio-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Pair Device</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">To use Bluetooth audio. you must first pair a device.</p>
+                    <p id="settings-gray-text">&#9670; Up to two wireless controllers can connect while using Bluetooth
+                        audio.
+                        <br>&#9670; Bluetooth audio will be disconnected during local communication.
+                        <br>&#9670; Bluetooth microphones cannot be used.
+                        <br>&#9670; You may experience audio latency depending on your Bluetooth device.
+                    </p>
+                </div>
+                <div id="tv-settings-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">TV Resolution</span>
+                    <span id="on-font">1080p</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">RGB Range</span>
+                    <span id="on-font">Full Range</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Adjust Screen Size</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Screen Burn-In Reduction</span>
+                    <span id="on-font">On</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Reduce screen brightness after five minutes of inactivity.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Match TV Power State</span>
+                    <span id="on-font">On</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">When switching to TV mode with the console docked or when the console exits
+                        sleep mode, the TV will turn on. Turning off the TV will put the console in sleep mode.</p>
+                    <p id="settings-gray-text">&#9670; HDMI settings must also be enabled on your TV. Some TV models may be
+                        unable to use this feature.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">TV Sound</span>
+                    <span id="on-font">Stereo</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                </div>
+                <div id="system-options-container">
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">System Update</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Current Version: 14.1.2</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Update Dock</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Update the Nintendo Switch dock firmware.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Console Nickname</span>
+                    <span id="on-font">Nitty</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Language</span>
+                    <span id="on-font">English</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Region</span>
+                    <span id="on-font">The Americas</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Date and Time</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Current date and Time</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Console Battery (%)</span>
+                    <span id="off-font">Off</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">The console battery will be displayed on the HOME Menu as a percentage.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Console Sound</span>
+                    <span id="on-font">Stereo</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">You can configure sound in the TV Settings menu when the console is connected
+                        to a TV.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Mute When Headphones Are Disconnected</span>
+                    <span id="on-font">On</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Lower Max Headphones Volume</span>
+                    <span id="off-font">Off</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">Set a maximum volume for headphones or speakers connected to the console.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">USB Keyboard</span>
+                    <span id="on-font">English (US)</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Change Display Colors</span>
+                    <span id="on-font">Default</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Zoom</span>
+                    <span id="off-font">Off</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <p id="settings-gray-text">You can zoom in by pressing home twice quickly.</p>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Serial information</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">End-User License Agreement</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Intellectual Property Notices</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Wireless E-Label</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Auto-Update Software</span>
+                    <span id="off-font">Off</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">News Channel Settings</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Share Error information</span>
+                    <span id="off-font">Off</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <br>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                    <span id="setting-font-header">Formatting Options</span>
+                    <div id="settings-text-horizontal-lines-right-side"></div>
+                </div>
+            </div>
+        </div>
+        <div id="settings-page-horizontal-lines"></div>
+        <div id="settings-page-horizontal-lines-2"></div>
+        <img id="switch-icon" src="images/switch-icon.png">
+        <img src="images/b-button.png" id="home-b-button" onclick="closeSettings()">
+        <span id="back-home-text" onclick="closeSettings()">Back</span>
+        <img src="images/a-button.png" id="home-a-button">
+        <span id="home-ok-text">OK</span>
+    </div>
+
+    <div>
+        <div id="tinted-window"></div>
+        <div id="popup-window">
+            <p id="top-text">The console will now enter sleep mode.</p>
+            <p id="middle-text">Press &#x2302; to wake it.</p>
+            <p id="bottom-text">You can also active sleep mode from Quick Settings (hold &#x2302;).</p>
+            <div id="sleepmode-horizontal-line"></div>
+            <div id="exit-sleepmode-container" onclick="backToHomePage()">
+                <span id="back-sleepmode-text">Back</span>
+            </div>
+            <div id="verticle-line-sleep-mode"></div>
+            <div id="enter-sleepmode-container" onclick="sleep()">
+                <span id="sleepmode-text">Sleep Mode</span>
+            </div>
+        </div>
+        <div id="sleep" onclick="backToWakeUpScreen()"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
