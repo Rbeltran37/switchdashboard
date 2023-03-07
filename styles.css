@@ -58,6 +58,7 @@ body {
   transform: translate(-50%, -50%);
   transition-property: top;
   transition-duration: 100ms;
+  cursor: pointer;
 }
 
 #second-thumbnail {
@@ -69,6 +70,7 @@ body {
   transform: translate(-50%, -50%);
   transition-property: top;
   transition-duration: 100ms;
+  cursor: pointer;
 }
 
 #third-thumbnail {
@@ -80,6 +82,7 @@ body {
   transform: translate(-50%, -50%);
   transition-property: top;
   transition-duration: 100ms;
+  cursor: pointer;
 }
 
 #y-button-icon {
@@ -89,6 +92,7 @@ body {
   top: 90%;
   left: 24%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 #featured-news-text {
@@ -98,6 +102,7 @@ body {
   left: 57%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .wake-up-text {
@@ -161,6 +166,7 @@ body {
   left: 5%;
   transform: translate(-50%, -50%);
   visibility: hidden;
+  cursor: pointer;
 }
 
 #left-side-wakeup-back-text {
@@ -171,6 +177,7 @@ body {
   left: 9%;
   transform: translate(-50%, -50%);
   visibility: hidden;
+  cursor: pointer;
 }
 
 #right-side-wakeup-screen {
@@ -228,6 +235,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 #a-button {
@@ -236,6 +244,7 @@ body {
   top: 90%;
   left: 42%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 #continue-text {
@@ -246,6 +255,7 @@ body {
   left: 52%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+  cursor: pointer;
 }
 
 #three-times-text {
@@ -434,12 +444,14 @@ body {
   margin-top: 4vh;
   margin-left: 4vw;
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 #yoshi-profile {
   border-radius: 50%;
   width: 3%;
   border: 0.35vw solid rgb(43, 43, 43);
+  cursor: pointer;
 }
 
 #yoshi-profile-text {
@@ -455,6 +467,7 @@ body {
   border-radius: 50%;
   width: 3%;
   border: 0.35vw solid rgb(43, 43, 43);
+  cursor: pointer;
 }
 
 #fox-profile-text {
@@ -524,6 +537,7 @@ body {
 
 #game-grid-cover {
   width: 100%;
+  cursor: pointer;
 }
 
 #switch-home-page-icons-container {
@@ -559,6 +573,7 @@ body {
   width: 100%;
   border-radius: 100%;
   border: 0.35vw solid rgb(43, 43, 43);
+  cursor: pointer;
 }
 
 #switch-online-icon-text {
@@ -576,6 +591,7 @@ body {
   width: 100%;
   border-radius: 100%;
   border: 0.35vw solid rgb(43, 43, 43);
+  cursor: pointer;
 }
 
 #news-icon-text {
@@ -593,6 +609,7 @@ body {
   width: 100%;
   border-radius: 100%;
   border: 0.35vw solid rgb(43, 43, 43);
+  cursor: pointer;
 }
 
 #eShop-icon-text {
@@ -610,6 +627,7 @@ body {
   width: 100%;
   border-radius: 100%;
   border: 0.35vw solid rgb(43, 43, 43);
+  cursor: pointer;
 }
 
 #album-icon-text {
@@ -627,6 +645,7 @@ body {
   width: 100%;
   border-radius: 100%;
   border: 0.35vw solid rgb(43, 43, 43);
+  cursor: pointer;
 }
 
 #controllers-icon-text {
@@ -644,6 +663,7 @@ body {
   width: 100%;;
   border-radius: 100%;
   border: 0.35vw solid rgb(43, 43, 43);
+  cursor: pointer;
 }
 
 #settings-icon-text {
@@ -661,6 +681,7 @@ body {
   width: 100%;;
   border-radius: 100%;
   border: 0.35vw solid rgb(43, 43, 43);
+  cursor: pointer;
 }
 
 #sleepmode-icon-text {
@@ -688,6 +709,7 @@ body {
   width: 2.2vw;
   bottom: 4vh;
   right: 22vw;
+  cursor: pointer;
 }
 
 #back-home-text {
@@ -697,6 +719,7 @@ body {
   z-index: 1;
   font-size: 2vw;
   color: white;
+  cursor: pointer;
 }
 
 #home-a-button {
@@ -803,6 +826,7 @@ body {
   margin-top: 7%;
   margin-bottom: 7%;
   border-left: .3vw solid #80ffd4;
+  cursor: pointer;
 }
 
 #profile-page-navigation-text {
@@ -813,6 +837,7 @@ body {
   margin-top: 7%;
   margin-bottom: 7%;
   border-left: .3vw solid rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 #profile-page-navigation-horizontal-line {
@@ -1164,6 +1189,7 @@ body {
   padding-left: 2.5%;
   padding-right: 2.5%;
   border-bottom: .35vw solid rgba(28, 255, 212, 0);
+  cursor: pointer;
 }
 
 #facebook-icon {
@@ -1176,6 +1202,7 @@ body {
   padding-left: 1%;
   padding-right: 1%;
   border-bottom: .35vw solid rgba(28, 255, 212, 0);
+  cursor: pointer;
 }
 
 #twitter-icon {
@@ -1185,6 +1212,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-bottom: .35vw solid rgba(28, 255, 212, 0);
+  cursor: pointer;
 }
 
 #ds-icon {
@@ -1197,6 +1225,7 @@ body {
   padding-left: 1.5%;
   padding-right: 1.5%;
   border-bottom: .35vw solid rgba(28, 255, 212, 0);
+  cursor: pointer;
 }
 
 #wii-u-icon {
@@ -1209,6 +1238,7 @@ body {
   padding-left: .5%;
   padding-right: .5%;
   border-bottom: .35vw solid rgba(28, 255, 212, 0);
+  cursor: pointer;
 }
 
 #r-button-with-arrow {
@@ -1497,10 +1527,11 @@ body {
 
 #nintendo-switch-online-popup-bottom {
   position: absolute;
-  top: 20%;
+  top: 80%;
   bottom: 0;
   left: 0;
   right: 0;
+  cursor: pointer;
 }
 
 #nintendo-switch-online-popup-top-text {
@@ -1516,10 +1547,9 @@ body {
   font-size: 2vw;
   color: white;
   position: absolute;
-  top: 67.5%;
-  left: 45%;
-  right: 45%;
-  text-align: center;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* News Page */
@@ -1656,6 +1686,7 @@ body {
 #news-page-body-grid-cell {
   background-color: #595959;
   border: .35vw solid rgba(43, 43, 43, 1);
+  cursor: pointer;
 }
 
 #news-page-body-grid-cell:hover {
@@ -1941,6 +1972,7 @@ body {
   height: 11.2%;
   border: .35vw solid rgba(0, 0, 0, 0);
   background-color: rgba(255, 255, 255, .2);
+  cursor: pointer;
 }
 
 #magnifying-glass {
@@ -1959,6 +1991,7 @@ body {
   margin-bottom: 0;
   color: rgba(255, 255, 255, .5);
   border: .35vw solid rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 #dummy-text-for-var {
@@ -1970,6 +2003,7 @@ body {
   position: absolute;
   top: 3.5vh;
   right: 34vw;
+  cursor: pointer;
 }
 
 #eshop-container-bottom-side-close {
@@ -1977,6 +2011,7 @@ body {
   position: absolute;
   top: 3.8vh;
   right: 29vw;
+  cursor: pointer;
 }
 
 #eshop-switch-icon-black {
@@ -2254,6 +2289,7 @@ body {
 #screenshot-thumbnail {
   width: 100%;
   border: .35vw solid rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 #screenshot-fullscreen {
@@ -2318,6 +2354,7 @@ body {
   position: absolute;
   right: 32.5vw;
   bottom: 3.5vh;
+  cursor: pointer;
 }
 
 #back-text-for-screenshot {
@@ -2325,6 +2362,7 @@ body {
   position: absolute;
   right: 28vw;
   bottom: 3.1vh;
+  cursor: pointer;
 }
 
 #x-button-for-screenshot {
@@ -2346,6 +2384,7 @@ body {
   position: absolute;
   right: 55vw;
   bottom: 3.05vh;
+  cursor: pointer;
 }
 
 #hide-text-for-screenshot {
@@ -2353,6 +2392,7 @@ body {
   position: absolute;
   right: 51vw;
   bottom: 3.1vh;
+  cursor: pointer;
 }
 
 /* Controllers Page */
@@ -2475,6 +2515,7 @@ body {
   padding-bottom: 2vh;
   padding-left: 1vw;
   border: .35vw solid rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 #controllers-blue-text:hover {
@@ -2526,6 +2567,7 @@ body {
   padding: 2vh 14vw;
   transform: translate(-50%, -50%);
   border: .35vw solid white;
+  cursor: pointer;
 }
 
 #pairing-new-controllers-page-done-text:hover {
@@ -2542,6 +2584,7 @@ body {
   padding: 2vh 2vw;
   transform: translate(-50%, -50%);
   border: .35vw solid white;
+  cursor: pointer;
 }
 
 #pairing-methods-text:hover {
@@ -2599,6 +2642,7 @@ body {
   color: white;
   padding: 2vh 12vw;
   border: .35vw solid white;
+  cursor: pointer;
 }
 
 #pairing-methods-page-close-text:hover {
@@ -2681,6 +2725,17 @@ body {
   align-items: center;
   justify-content: center;
   border: .35vw solid white;
+  cursor: pointer;
+}
+
+#find-controllers-bottom-text2 {
+  color: white;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .35vw solid white;
+  cursor: pointer;
 }
 
 #question-mark-circle {
@@ -2689,6 +2744,11 @@ body {
 }
 
 #find-controllers-bottom-text:hover {
+  animation: selected 0.8s alternate ease-out infinite;
+  background-color: rgb(0, 0, 0, .3);
+}
+
+#find-controllers-bottom-text2:hover {
   animation: selected 0.8s alternate ease-out infinite;
   background-color: rgb(0, 0, 0, .3);
 }
@@ -2752,6 +2812,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 #controllers-cant-be-found-ok-text {
@@ -2846,8 +2907,15 @@ body {
   color: white;
 }
 
+#change-grib-order-body-bottom-back-text {
+  font-size: 2vw;
+  color: white;
+  cursor: pointer;
+}
+
 #b-button-find-controller {
   width: 1.5vw;
+  cursor: pointer;
 }
 
 #change-grib-order-footer-container {
@@ -2953,6 +3021,7 @@ body {
   color: white;
   border-left: .3vw solid rgba(0, 0, 0, 0);
   padding-left: .5vw;
+  cursor: pointer;
 }
 
 #registered-sign {
@@ -2966,6 +3035,7 @@ body {
   color: white;
   border-left: .3vw solid rgba(0, 0, 0, 0);
   padding-left: .5vw;
+  cursor: pointer;
 }
 
 #settings-text-horizontal-lines {
@@ -3416,6 +3486,7 @@ body {
   right: 50%;
   top: 79%;
   bottom: 0;
+  cursor: pointer;
 }
 
 #exit-sleepmode-container:hover {
@@ -3448,6 +3519,7 @@ body {
   right: 0;
   top: 79%;
   bottom: 0;
+  cursor: pointer;
 }
 
 #enter-sleepmode-container:hover {
